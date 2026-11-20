@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.1",
+  "electionCode": "BEINGS-2026-K7M4Q2",
+  "version": 1,
+  "merkleRoot": "0x5d1e9a3b7c2f4086a1d3e5f7092b4c6d8e0a1f3b5d7c9e2a4b6d8f0a1c3e5b79",
+  "perQuestion": {
+    "q1": {
+      "valid": 100,
+      "blank": 8,
+      "overvote": 6,
+      "unclear": 5,
+      "byChoice": {
+        "c1": 60,
+        "c2": 30,
+        "c3": 10
+      }
+    },
+    "q2": {
+      "valid": 105,
+      "blank": 9,
+      "overvote": 3,
+      "unclear": 2,
+      "byChoice": {
+        "c1": 40,
+        "c2": 65
+      }
+    }
+  },
+  "reconciliation": {
+    "registered": 120,
+    "printed": 130,
+    "issued": 123,
+    "cast": 119,
+    "spoiled": 3,
+    "unusedReturned": 0,
+    "unissued": 7
+  },
+  "checks": {
+    "R1_castLeIssued": true,
+    "R2_issuedLeRegistered": true,
+    "R3_issuedLePrinted": true,
+    "R4_issuedEqualsParts": false,
+    "R5_questionSums": true,
+    "R6_registeredMatchesFile": true
+  },
+  "status": "provisional",
+  "review": {
+    "required": true
+  }
+}

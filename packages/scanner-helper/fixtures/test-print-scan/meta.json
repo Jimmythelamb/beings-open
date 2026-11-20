@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "note": "Bundled fixture for the optional test print and scan. Not a real election. Do not record or upload.",
+  "electionCode": "BEINGS-2026-TEST00",
+  "electionName": "SYNTHETIC TEST PAGE — NOT A REAL BALLOT",
+  "ballotCode": "TESTPRNTSC01",
+  "ballotKey": "0xbb39023f85d1ff8cb6e6cd1fa77bcf8e4f0d611c563f51032655096dd9dc1e51",
+  "layoutHash": "c2beac63ef418f67a1e860cae0326133fedfd1edf5e4049921c5a80c103cb1eb",
+  "electionFileSha256": "dc656b870a53ce901e9e263fd2f5a7fb4d00f2284a2dcae7f5e2500b77de4b6f"
+}

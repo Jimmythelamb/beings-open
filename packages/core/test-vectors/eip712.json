@@ -1,0 +1,157 @@
+{
+  "note": "TEST-ONLY private keys. Signatures are deterministic (RFC 6979).",
+  "domain": {
+    "name": "B.E.I.N.G.S.",
+    "version": "1",
+    "chainId": 114,
+    "verifyingContract": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  },
+  "wallets": {
+    "device1": {
+      "privateKey": "REDACTED-TEST-VECTOR",
+      "address": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf"
+    },
+    "device2": {
+      "privateKey": "REDACTED-TEST-VECTOR",
+      "address": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF"
+    },
+    "reviewer": {
+      "privateKey": "REDACTED-TEST-VECTOR",
+      "address": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69"
+    },
+    "node": {
+      "privateKey": "REDACTED-TEST-VECTOR",
+      "address": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718"
+    }
+  },
+  "reading": {
+    "input": {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "4F9Q7M2XHT8B",
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c2"
+      },
+      "imageSha256": "3dd3f8d1db39a536c4f48318eda8e4a804f53fbc2b25b94e3aa98b201be050da",
+      "fillScores": {
+        "q1": {
+          "c1": 92,
+          "c2": 3,
+          "c3": 0
+        },
+        "q2": {
+          "c1": 2,
+          "c2": 88
+        }
+      },
+      "questionOrder": [
+        "q1",
+        "q2"
+      ]
+    },
+    "scoresHash": "0x82e44f346d613604f18af3290629e3bfea4da4322b3bc6e4df462d3f4cc7bfaa",
+    "message": {
+      "electionKey": "0x97a3b6db021a2a6a6004c027252ffcabf67dd2c57b9bd84c3735284c6007b752",
+      "ballotKey": "0x024613ef5cc15cb497c14840be49b61aea2dfdcd0be74ecde3939d43e5321f9e",
+      "resultsHash": "0xf7c759dfd53f867895332810c96bb7806700755cdb9cf35596b4c59680d7c331",
+      "imageSha256": "0x3dd3f8d1db39a536c4f48318eda8e4a804f53fbc2b25b94e3aa98b201be050da",
+      "scoresHash": "0x82e44f346d613604f18af3290629e3bfea4da4322b3bc6e4df462d3f4cc7bfaa"
+    },
+    "digest": "0x6004e53da56cf50ad55b19b55d4648d947ad5b9aabe168ada753002ef4adac25",
+    "signatureDevice1": "0x30fa8f1a16f35738fcf7f11670389c25017dc0acb076596adbcc3eb221e3c4eb1b890ca49cecc9b942b382d2787784d6bf356fd6126cd9a45e164ec4178e880e1c"
+  },
+  "review": {
+    "input": {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "B3N6D0YK5E1W",
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c1"
+      },
+      "questionOrder": [
+        "q1",
+        "q2"
+      ]
+    },
+    "signatureReviewer": "0x50e6c9719ac90dcd137fb50b71493ddd2c5da5c5556ee2c1b16358246404497e4a68ded995d70e958d15454b1c966aba51a3db4191a98ceba48ae4e7b36b546f1c"
+  },
+  "report": {
+    "unsigned": {
+      "schemaVersion": "0.1",
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "tallyVersion": 1,
+      "node": {
+        "address": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+        "operator": "Test node"
+      },
+      "software": {
+        "name": "beings-verifier",
+        "version": "0.0.0",
+        "omrBuild": "test"
+      },
+      "ledgerHead": "0x6764bf6dd2b21457a025aee33b4cee6a6b16df3bd66ed0eb1943998bfdba8c2b",
+      "scope": {
+        "mode": "all",
+        "ballotsChecked": 5
+      },
+      "hashChecks": {
+        "checked": 5,
+        "failed": []
+      },
+      "readChecks": {
+        "ballotQuestionsChecked": 10,
+        "agreed": 10,
+        "disagreed": 0,
+        "disagreements": []
+      },
+      "tally": {
+        "matches": true
+      },
+      "reconciliation": {
+        "matches": true
+      },
+      "merkle": {
+        "recomputedRoot": "0xd6c66cad06fe14fdb6ce9297d80d32f24d7428996d0045cbf90cc345c677ba16",
+        "matches": true
+      },
+      "createdAt": "2026-11-21T10:00:00Z"
+    },
+    "reportHash": "0xca99b0e6e7c5a35aa78f45d84debe98ea7fa4f53a73ffa6d13e1e714bacf1fcf",
+    "signatureNode": "0xda0256372a0c01ae69fe274f3e29ca42ae391e5d26296cedd8614dade63f00c24e07edcf649e46cbafd05b5e956cd810b84899e97098b26be4aa91b3ca2290fe1c"
+  },
+  "notice": {
+    "note": "[PROPOSED] VerificationNotice for VerifierRegistry.reportVerificationSigned; domain verifyingContract is the VerifierRegistry (4th contract deployed by Hardhat account #0).",
+    "domain": {
+      "name": "B.E.I.N.G.S.",
+      "version": "1",
+      "chainId": 114,
+      "verifyingContract": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
+    },
+    "input": {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "tallyVersion": 1,
+      "reportCid": "bafy-test-report-cid",
+      "reportSha256": "cf0cb4dc850101c69dd4012e470ed71ee051f8bdb2f6af0687190b78c7622634",
+      "ballotQuestionsChecked": 10,
+      "ballotQuestionsAgreed": 10,
+      "tallyMatches": true,
+      "reconciliationMatches": true,
+      "merkleMatches": true,
+      "nonce": 0
+    },
+    "message": {
+      "electionKey": "0x97a3b6db021a2a6a6004c027252ffcabf67dd2c57b9bd84c3735284c6007b752",
+      "tallyVersion": 1,
+      "reportCidHash": "0x088d023449c5785ce68e38a91c3864ef20d465427d7de7f41068bc6a0de268ef",
+      "reportSha256": "0xcf0cb4dc850101c69dd4012e470ed71ee051f8bdb2f6af0687190b78c7622634",
+      "ballotQuestionsChecked": "10",
+      "ballotQuestionsAgreed": "10",
+      "tallyMatches": true,
+      "reconciliationMatches": true,
+      "merkleMatches": true,
+      "nonce": "0"
+    },
+    "digest": "0x5394c39e123643671e616c1a10927d070bfe8637333bfefaf812ee93123f3259",
+    "signatureNode": "0xb5c34692a5be9c6164d7e8aa205891bc831d1d15bfce0994fe438aa60b8b8d0a5e8806d1882819b73aeb659d01f1c66b55534051fe8fa3b17f3b8bc8920790e01b"
+  }
+}

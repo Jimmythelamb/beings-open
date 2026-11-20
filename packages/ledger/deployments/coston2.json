@@ -1,0 +1,78 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "deployer": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+  "deployBlock": 37317124,
+  "contracts": {
+    "BallotLedger": "0xF579913c90b86f102Fff8D07c6c16f465495013C",
+    "ElectionRegistry": "0x651A078e51B69Eff17e22950573EbE0252f43E63",
+    "Tally": "0x9844040a1B4BEC18a384d68F29cE2bd5D24cB4f4",
+    "VerifierRegistry": "0xdb6A83242139E3b7D47c31588d8d06c64CE94316"
+  },
+  "eip712": {
+    "name": "B.E.I.N.G.S.",
+    "version": "1",
+    "chainId": 114
+  },
+  "explorer": "https://coston2-explorer.flare.network",
+  "deployTransactions": [
+    {
+      "step": "BallotLedger",
+      "txHash": "0x69e115b5b3cf2a3a7d447ced0780816585d7fdc5ccd393d09194ecc48fafae20",
+      "block": 37317112,
+      "gasUsed": 2400544,
+      "gasPriceWei": "650000000000",
+      "fee": "1.5603536",
+      "status": 1
+    },
+    {
+      "step": "ElectionRegistry",
+      "txHash": "0xd509d952453d06fd48ea6ae330bdb9352af3d393ccbca67c096d25cdf753f044",
+      "block": 37317115,
+      "gasUsed": 1740692,
+      "gasPriceWei": "650000000000",
+      "fee": "1.1314498",
+      "status": 1
+    },
+    {
+      "step": "Tally",
+      "txHash": "0x99af996817f20f408bb038974a0266e4792e372dd6df95b1968391ef02a52a8d",
+      "block": 37317116,
+      "gasUsed": 1830582,
+      "gasPriceWei": "650000000000",
+      "fee": "1.1898783",
+      "status": 1
+    },
+    {
+      "step": "VerifierRegistry",
+      "txHash": "0xa03294f255a8ef524e4699d002d873fae3a7f0d2f8292704e4516bf0b58b74b0",
+      "block": 37317118,
+      "gasUsed": 1453364,
+      "gasPriceWei": "650000000000",
+      "fee": "0.9446866",
+      "status": 1
+    },
+    {
+      "step": "setLedger",
+      "txHash": "0xafd549bd54241c0f0807cfebd1246eaf92b5a51fbfd02d1759ba94b3a7f74f16",
+      "block": 37317121,
+      "gasUsed": 45297,
+      "gasPriceWei": "650000000000",
+      "fee": "0.02944305",
+      "status": 1
+    },
+    {
+      "step": "setTally",
+      "txHash": "0xfc16d24a5ee685c1a8308e29387ef33d5774250d28f3524838a8baa7e2370988",
+      "block": 37317124,
+      "gasUsed": 45367,
+      "gasPriceWei": "650000000000",
+      "fee": "0.02948855",
+      "status": 1
+    }
+  ],
+  "totalDeployGas": 7515846,
+  "totalDeployFee": "4.8852999",
+  "evmVersion": "london",
+  "solc": "0.8.24"
+}

@@ -1,0 +1,26 @@
+{
+  "_comment": "Elections the site always lists (the list is also discovered from the chain via the block explorer). `file` is an optional public copy of the election file, used only when the file on the ledger's CID cannot be fetched (the test elections were never published to IPFS). `set` is the config.js legacySets id these elections were created on. New elections omit it and are created on the current contracts.",
+  "elections": [
+    {
+      "code": "BEINGS-2026-WMRHGH",
+      "file": "data/elections/BEINGS-2026-WMRHGH.json",
+      "set": "pre-pool"
+    },
+    {
+      "code": "BEINGS-2026-4CRWX2",
+      "set": "pre-pool"
+    },
+    {
+      "code": "BEINGS-2026-75D8PK",
+      "set": "pre-pool"
+    },
+    {
+      "code": "BEINGS-2026-2MJTDK",
+      "set": "pre-pool"
+    },
+    {
+      "code": "BEINGS-2026-QB1TTH",
+      "set": "pre-pool"
+    }
+  ]
+}

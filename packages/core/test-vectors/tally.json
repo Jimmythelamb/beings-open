@@ -1,0 +1,188 @@
+{
+  "entries": [
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "4F9Q7M2XHT8B",
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c2"
+      },
+      "imageSha256": "3dd3f8d1db39a536c4f48318eda8e4a804f53fbc2b25b94e3aa98b201be050da",
+      "recordSha256": "b512b2dd10a5444b38811e7eb9487baaadad0e9da59ef29a0c34c24603e349df",
+      "reviewed": false
+    },
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "B3N6D0YK5E1W",
+      "results": {
+        "q1": "U",
+        "q2": "V:c1"
+      },
+      "imageSha256": "0cf457e24a479f02fd4d34540389f720f0807dcff92a7562108165b2637ea82f",
+      "recordSha256": "b7462d6ced2c15add3dbe47755277fa9618aceb17c68f507128896d622d4c5ee",
+      "reviewed": true
+    },
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "0123456789AB",
+      "results": {
+        "q1": "B",
+        "q2": "O"
+      },
+      "imageSha256": "5a0717cb6596468ea1dffa86011f9b0f497348d80421835b51799f9aeb455642",
+      "recordSha256": "7bd87ca67f07e7904cc69653a6b4b41af5951dff5eabece3ef3553a034c592a4",
+      "reviewed": false
+    },
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "CDEFGHJKMNPQ",
+      "results": {
+        "q1": "V:c3",
+        "q2": "V:c1"
+      },
+      "imageSha256": "d9f313aef2d97e58def0511fdc17512d53e6b30d578860ae04b5288c6a239010",
+      "recordSha256": "22dc2e6404475362e139e594e3486a24676dfe64609fca46511d4149ea9e7488",
+      "reviewed": false
+    },
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "RSTVWXYZ0123",
+      "results": {
+        "q1": "V:c1",
+        "q2": "B"
+      },
+      "imageSha256": "cd9642ec4090bd48559965f15bacc913b5420818d39d0cc7e1b59f4a9257c920",
+      "recordSha256": "161fcc53e5674fa7b6660f0742c8e4d3eb8996bfd341b49bf57800a06b1d3e56",
+      "reviewed": false
+    }
+  ],
+  "corrections": [
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "B3N6D0YK5E1W",
+      "questionId": "q1",
+      "prevIndex": 0,
+      "from": "U",
+      "to": "V:c2",
+      "reason": "faint-mark",
+      "by": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69"
+    },
+    {
+      "electionCode": "BEINGS-2026-K7M4Q2",
+      "ballotCode": "B3N6D0YK5E1W",
+      "questionId": "q1",
+      "prevIndex": 1,
+      "from": "V:c2",
+      "to": "V:c1",
+      "reason": "other",
+      "by": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69"
+    }
+  ],
+  "effectiveResults": [
+    {
+      "ballotCode": "4F9Q7M2XHT8B",
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c2"
+      }
+    },
+    {
+      "ballotCode": "B3N6D0YK5E1W",
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c1"
+      }
+    },
+    {
+      "ballotCode": "0123456789AB",
+      "results": {
+        "q1": "B",
+        "q2": "O"
+      }
+    },
+    {
+      "ballotCode": "CDEFGHJKMNPQ",
+      "results": {
+        "q1": "V:c3",
+        "q2": "V:c1"
+      }
+    },
+    {
+      "ballotCode": "RSTVWXYZ0123",
+      "results": {
+        "q1": "V:c1",
+        "q2": "B"
+      }
+    }
+  ],
+  "tallyWithoutCorrections": {
+    "q1": {
+      "valid": 3,
+      "blank": 1,
+      "overvote": 0,
+      "unclear": 1,
+      "byChoice": {
+        "c1": 2,
+        "c2": 0,
+        "c3": 1
+      }
+    },
+    "q2": {
+      "valid": 3,
+      "blank": 1,
+      "overvote": 1,
+      "unclear": 0,
+      "byChoice": {
+        "c1": 2,
+        "c2": 1
+      }
+    }
+  },
+  "tallyWithCorrections": {
+    "q1": {
+      "valid": 4,
+      "blank": 1,
+      "overvote": 0,
+      "unclear": 0,
+      "byChoice": {
+        "c1": 3,
+        "c2": 0,
+        "c3": 1
+      }
+    },
+    "q2": {
+      "valid": 3,
+      "blank": 1,
+      "overvote": 1,
+      "unclear": 0,
+      "byChoice": {
+        "c1": 2,
+        "c2": 1
+      }
+    }
+  },
+  "leaves": [
+    {
+      "ballotCode": "4F9Q7M2XHT8B",
+      "leaf": "0x950ee4ad2a448c350cc1c16a1c371ed051ac427beaa2fa51dcbe0e827cc1cd9e"
+    },
+    {
+      "ballotCode": "B3N6D0YK5E1W",
+      "leaf": "0xa0a92ddadbfcfd955adbab50f0e28617b15ffd359fd39ef64689cfb99e2c9d1b"
+    },
+    {
+      "ballotCode": "0123456789AB",
+      "leaf": "0x696c68139fe1c086ea23f166da65aa918810ad145260626f8e7255ff664ee5a7"
+    },
+    {
+      "ballotCode": "CDEFGHJKMNPQ",
+      "leaf": "0x795c95aa79d7e95cdaf24d6aa3b15d81e1b1558037b5fff5c68c308bc4e634db"
+    },
+    {
+      "ballotCode": "RSTVWXYZ0123",
+      "leaf": "0x7cb0cfe92e31e8a953ad5f640087ed9c150dbf4c6a7f5fdffe69463e89867185"
+    }
+  ],
+  "merkleRootWithCorrections": "0xe6e1a51f5a114e08588c25c727441103ca3265a11ba497c3593c448bfb7e719a",
+  "merkleRootWithoutCorrections": "0xa13994350857e9f5c9e10d2c184b887a73d5202d04bb20b2ff547ebc81ab79b0"
+}

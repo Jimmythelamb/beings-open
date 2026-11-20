@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B.E.I.N.G.S. correction entry (draft)",
+  "type": "object",
+  "required": [
+    "electionCode",
+    "ballotCode",
+    "questionId",
+    "prevIndex",
+    "from",
+    "to",
+    "reason",
+    "by"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "electionCode": {
+      "type": "string"
+    },
+    "ballotCode": {
+      "type": "string",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{12}$"
+    },
+    "questionId": {
+      "type": "string",
+      "pattern": "^q[0-9]{1,3}$"
+    },
+    "prevIndex": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "0 = the original record"
+    },
+    "from": {
+      "type": "string",
+      "description": "e.g. U"
+    },
+    "to": {
+      "type": "string",
+      "description": "e.g. V:c2"
+    },
+    "reason": {
+      "enum": [
+        "faint-mark",
+        "erasure",
+        "stray-mark",
+        "glare-or-alignment",
+        "phone-misread",
+        "other"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "evidenceCid": {
+      "type": "string"
+    },
+    "by": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]{40}$"
+    }
+  }
+}

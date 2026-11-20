@@ -1,0 +1,64 @@
+[
+  {
+    "input": {
+      "b": 2,
+      "a": 1
+    },
+    "canonical": "{\"a\":1,\"b\":2}"
+  },
+  {
+    "input": [
+      3,
+      1,
+      2
+    ],
+    "canonical": "[3,1,2]"
+  },
+  {
+    "input": {
+      "1": "one",
+      "": 0,
+      "€": "euro",
+      "\r": "cr",
+      "😀": "smile",
+      "": "c1",
+      "👻": "ghost"
+    },
+    "canonical": "{\"\":0,\"\\r\":\"cr\",\"1\":\"one\",\"\":\"c1\",\"€\":\"euro\",\"👻\":\"ghost\",\"😀\":\"smile\"}"
+  },
+  {
+    "input": {
+      "n": [
+        0,
+        0,
+        1e+21,
+        1e-7,
+        123456789012345680000,
+        0.000001,
+        1.5,
+        -1.5,
+        4.5,
+        2e-7
+      ]
+    },
+    "canonical": "{\"n\":[0,0,1e+21,1e-7,123456789012345680000,0.000001,1.5,-1.5,4.5,2e-7]}"
+  },
+  {
+    "input": {
+      "s": "line\nbreak \"quoted\" back\\slash \u0007 \u001f  </script>"
+    },
+    "canonical": "{\"s\":\"line\\nbreak \\\"quoted\\\" back\\\\slash \\u0007 \\u001f  </script>\"}"
+  },
+  {
+    "input": {
+      "nested": {
+        "z": null,
+        "y": true,
+        "x": false,
+        "w": [],
+        "v": {}
+      }
+    },
+    "canonical": "{\"nested\":{\"v\":{},\"w\":[],\"x\":false,\"y\":true,\"z\":null}}"
+  }
+]

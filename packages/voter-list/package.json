@@ -1,0 +1,7 @@
+{
+  "name": "@beings/voter-list",
+  "version": "0.0.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. Voter list (M1): placeholder, not yet implemented",
+  "type": "module"
+}

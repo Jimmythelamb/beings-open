@@ -1,0 +1,53 @@
+{
+  "network": "hardhat (in-process, chainId 114)",
+  "compiler": "solc 0.8.24, optimizer 200 runs, evm london",
+  "runtimeBytecodeBytes": 3690,
+  "gas": {
+    "deploy": 859032,
+    "firstNote_noName": 138308,
+    "secondNote_manifest_noName": 121052,
+    "thirdNote_64byteName": 123571
+  },
+  "cidBytes": {
+    "note": 83,
+    "manifest": 69
+  },
+  "costC2FLR": {
+    "1152.132490476 gwei": {
+      "deploy": {
+        "estimate": "0.989718677558579232",
+        "capPlus30": "1.286634280826153001"
+      },
+      "firstNote_noName": {
+        "estimate": "0.159349140492754608",
+        "capPlus30": "0.20715388264058099"
+      },
+      "secondNote_manifest_noName": {
+        "estimate": "0.139467942237100752",
+        "capPlus30": "0.181308324908230977"
+      },
+      "thirdNote_64byteName": {
+        "estimate": "0.142370163980609796",
+        "capPlus30": "0.185081213174792734"
+      }
+    },
+    "507.438199205 gwei": {
+      "deploy": {
+        "estimate": "0.43590565113946956",
+        "capPlus30": "0.566677346481310428"
+      },
+      "firstNote_noName": {
+        "estimate": "0.07018276245564514",
+        "capPlus30": "0.091237591192338682"
+      },
+      "secondNote_manifest_noName": {
+        "estimate": "0.06142640889016366",
+        "capPlus30": "0.079854331557212758"
+      },
+      "thirdNote_64byteName": {
+        "estimate": "0.062704645713961055",
+        "capPlus30": "0.081516039428149371"
+      }
+    }
+  }
+}

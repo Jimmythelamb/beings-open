@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/beings/ballot-layout.schema.json",
+  "title": "B.E.I.N.G.S. ballot layout (IC2, PROPOSED draft)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "layoutVersion", "electionCode", "units", "origin", "page", "frame", "markers", "oval", "qr", "ballotCodeText", "electionCodeText", "receiptElectionCodeText", "receiptQr", "tearLineY", "receiptStub", "examplesPanel", "questions", "redaction"],
+  "$defs": {
+    "point": { "type": "object", "additionalProperties": false, "required": ["x", "y"], "properties": { "x": { "type": "number" }, "y": { "type": "number" } } },
+    "box": { "type": "object", "additionalProperties": false, "required": ["x", "y", "width", "height"], "properties": { "x": { "type": "number" }, "y": { "type": "number" }, "width": { "type": "number", "exclusiveMinimum": 0 }, "height": { "type": "number", "exclusiveMinimum": 0 } } }
+  },
+  "properties": {
+    "schemaVersion": { "const": "0.1" },
+    "layoutVersion": { "type": "integer", "minimum": 1 },
+    "electionCode": { "type": "string", "pattern": "^BEINGS-[0-9]{4}-[0-9A-HJKMNP-TV-Z]{6}$" },
+    "units": { "const": "mm" },
+    "origin": { "type": "string" },
+    "page": { "type": "object", "additionalProperties": false, "required": ["size", "widthMm", "heightMm"], "properties": { "size": { "const": "Letter" }, "widthMm": { "type": "number" }, "heightMm": { "type": "number" } } },
+    "frame": { "type": "object", "additionalProperties": false, "required": ["widthMm", "heightMm"], "properties": { "widthMm": { "type": "number", "exclusiveMinimum": 0 }, "heightMm": { "type": "number", "exclusiveMinimum": 0 } } },
+    "markers": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": { "type": "object", "additionalProperties": false, "required": ["id", "shape", "sizeMm", "center"], "properties": { "id": { "enum": ["TL", "TR", "BL", "BR"] }, "shape": { "const": "square" }, "sizeMm": { "type": "number", "exclusiveMinimum": 0 }, "center": { "$ref": "#/$defs/point" } } }
+    },
+    "oval": {
+      "type": "object", "additionalProperties": false, "required": ["shape", "widthMm", "heightMm", "outline", "sampleScale", "baselineRingScale"],
+      "properties": { "shape": { "const": "ellipse" }, "widthMm": { "type": "number", "exclusiveMinimum": 0 }, "heightMm": { "type": "number", "exclusiveMinimum": 0 }, "outline": { "type": "string" }, "sampleScale": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "baselineRingScale": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "number", "exclusiveMinimum": 1 } } }
+    },
+    "qr": {
+      "type": "object", "additionalProperties": false, "required": ["payloadFormat", "errorCorrection", "moduleMm", "quietZoneModules", "modules", "bbox"],
+      "properties": { "payloadFormat": { "type": "string" }, "errorCorrection": { "const": "M" }, "moduleMm": { "type": "number", "exclusiveMinimum": 0 }, "quietZoneModules": { "type": "integer", "minimum": 0 }, "modules": { "type": "integer", "minimum": 21 }, "bbox": { "$ref": "#/$defs/box" } }
+    },
+    "ballotCodeText": { "type": "object", "additionalProperties": false, "required": ["bbox", "format"], "properties": { "bbox": { "$ref": "#/$defs/box" }, "format": { "type": "string" } } },
+    "electionCodeText": { "type": "object", "additionalProperties": false, "required": ["bbox", "format"], "description": "Human-readable election code on the ballot body, above the tear line.", "properties": { "bbox": { "$ref": "#/$defs/box" }, "format": { "type": "string" } } },
+    "receiptElectionCodeText": { "type": "object", "additionalProperties": false, "required": ["bbox", "format"], "description": "Human-readable election code on the tear-off receipt.", "properties": { "bbox": { "$ref": "#/$defs/box" }, "format": { "type": "string" } } },
+    "receiptQr": {
+      "type": "object", "additionalProperties": false,
+      "description": "QR on the receipt. An https link with the election code in the URL fragment. Not the machine-read QR.",
+      "required": ["purpose", "payloadFormat", "url", "errorCorrection", "moduleMm", "quietZoneModules", "modules", "bbox"],
+      "properties": {
+        "purpose": { "const": "voter-check-link" },
+        "payloadFormat": { "type": "string" },
+        "url": { "type": "string", "pattern": "^https://[A-Za-z0-9.-]+(?::[0-9]{1,5})?/check\\.html#e=BEINGS-[0-9]{4}-[0-9A-HJKMNP-TV-Z]{6}$" },
+        "errorCorrection": { "const": "M" },
+        "moduleMm": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 0.857 },
+        "quietZoneModules": { "type": "integer", "minimum": 0 },
+        "modules": { "type": "integer", "minimum": 21 },
+        "bbox": { "$ref": "#/$defs/box" }
+      }
+    },
+    "tearLineY": { "type": "number", "description": "y of the dashed tear line in the marker frame, mm. Everything scanned (markers, ovals, QR, code) lies above it." },
+    "receiptStub": { "$ref": "#/$defs/box" },
+    "examplesPanel": { "$ref": "#/$defs/box" },
+    "questions": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "maxMarks", "headingBox", "idBox", "ovals"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^q[0-9]{1,3}$" },
+          "maxMarks": { "type": "integer", "minimum": 1 },
+          "headingBox": { "$ref": "#/$defs/box" },
+          "idBox": { "$ref": "#/$defs/box", "description": "where the question id (Q1 for q1) is printed" },
+          "ovals": {
+            "type": "array", "minItems": 2,
+            "items": { "type": "object", "additionalProperties": false, "required": ["choiceId", "idBox", "center", "uv", "widthMm", "heightMm"], "properties": { "choiceId": { "type": "string", "pattern": "^c[0-9]{1,3}$" }, "idBox": { "$ref": "#/$defs/box", "description": "where the choice id (c2) is printed: light grey, outside the oval and its baseline ring" }, "center": { "$ref": "#/$defs/point" }, "uv": { "$ref": "#/$defs/point" }, "widthMm": { "type": "number", "exclusiveMinimum": 0 }, "heightMm": { "type": "number", "exclusiveMinimum": 0 } } }
+          }
+        }
+      }
+    },
+    "redaction": { "type": "object", "additionalProperties": false, "required": ["keep", "note"], "properties": { "keep": { "type": "array", "items": { "type": "string" } }, "note": { "type": "string" } } }
+  }
+}

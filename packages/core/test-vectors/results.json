@@ -1,0 +1,157 @@
+{
+  "derivation": [
+    {
+      "scores": {
+        "c1": 92,
+        "c2": 3,
+        "c3": 0
+      },
+      "maxMarks": 1,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "V:c1"
+    },
+    {
+      "scores": {
+        "c1": 0,
+        "c2": 0,
+        "c3": 0
+      },
+      "maxMarks": 1,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "B"
+    },
+    {
+      "scores": {
+        "c1": 90,
+        "c2": 80,
+        "c3": 0
+      },
+      "maxMarks": 1,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "O"
+    },
+    {
+      "scores": {
+        "c1": 90,
+        "c2": 80,
+        "c3": 0
+      },
+      "maxMarks": 2,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "V:c1+c2"
+    },
+    {
+      "scores": {
+        "c1": 90,
+        "c2": 30,
+        "c3": 0
+      },
+      "maxMarks": 1,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "U"
+    },
+    {
+      "scores": {
+        "c1": 90,
+        "c2": 30,
+        "c3": 0
+      },
+      "maxMarks": 2,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "U"
+    },
+    {
+      "scores": {
+        "c1": 90,
+        "c2": 80,
+        "c3": 70
+      },
+      "maxMarks": 2,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "O"
+    },
+    {
+      "scores": {
+        "c1": 15,
+        "c2": 50,
+        "c3": 0
+      },
+      "maxMarks": 1,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "U"
+    },
+    {
+      "scores": {
+        "c1": 14,
+        "c2": 51,
+        "c3": 0
+      },
+      "maxMarks": 1,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "V:c2"
+    },
+    {
+      "scores": {
+        "c1": 70,
+        "c2": 0,
+        "c3": 80
+      },
+      "maxMarks": 2,
+      "rules": {
+        "emptyBelow": 15,
+        "markedAbove": 50
+      },
+      "result": "V:c1+c3"
+    }
+  ],
+  "encoded": [
+    {
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c2"
+      },
+      "questionOrder": [
+        "q1",
+        "q2"
+      ],
+      "encoded": "V:c1|V:c2",
+      "hash": "0xf7c759dfd53f867895332810c96bb7806700755cdb9cf35596b4c59680d7c331"
+    },
+    {
+      "results": {
+        "q10": "B",
+        "q2": "V:c1+c3"
+      },
+      "questionOrder": null,
+      "encoded": "V:c1+c3|B",
+      "hash": "0xe60be718d9e5db8dfa02890f8ee27c1b0d685642d4dd375dce669647bb432a20"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@beings/core",
+  "version": "0.1.0",
+  "description": "B.E.I.N.G.S. M7 shared core library: hashing, canonical JSON, schemas, signing, Merkle, tally, reconciliation",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schemas/*": "./schemas/*"
+  },
+  "files": ["dist", "schemas", "test-vectors"],
+  "scripts": {
+    "gen:schemas": "node scripts/gen-schemas.mjs",
+    "gen:vectors": "tsx scripts/gen-vectors.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

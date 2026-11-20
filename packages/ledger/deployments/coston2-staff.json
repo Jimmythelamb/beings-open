@@ -1,0 +1,25 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "deployer": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+  "deployBlock": 37963247,
+  "contracts": {
+    "StaffRegistry": "0x7e519d972e61929f54d9f316eA79F6BB51dAf635",
+    "ElectionRegistry": "0x9Ae01EEAf38FB03554970cbDC7F83FFBB8d4Ee8A"
+  },
+  "explorer": "https://coston2-explorer.flare.network",
+  "deployTransactions": [
+    {
+      "step": "StaffRegistry",
+      "txHash": "0xf628baa51be82c51fa360ac7da10b0c902dd5de4ede45a14ad12ec53a03bb067",
+      "block": 37963247,
+      "gasUsed": "4751654",
+      "effectiveGasPriceWei": "518603913571",
+      "feeC2FLR": "2.464226360335296434",
+      "status": 1
+    }
+  ],
+  "totalDeployGas": 4751654,
+  "totalDeployFee": "2.464226360335296434",
+  "configKey": "staffRegistry"
+}

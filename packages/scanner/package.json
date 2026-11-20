@@ -1,0 +1,36 @@
+{
+  "name": "@beings/scanner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. Scanning (M3): OMR prototype (Python) plus TypeScript helpers to upload a scan to the image store and verify a fetched image against the ledger",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "beings-scan-upload": "./dist/cli.js"
+  },
+  "files": ["dist", "prototype"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build -w @beings/core",
+    "test": "vitest run",
+    "upload": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@beings/core": "*",
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

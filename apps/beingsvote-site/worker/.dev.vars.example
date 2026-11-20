@@ -1,0 +1,10 @@
+# Copy to .dev.vars for `wrangler dev`. .dev.vars is gitignored.
+# Placeholder only. Generate a value outside the repo; do not paste a real token here.
+# node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+SCANNER_UPLOAD_TOKEN=
+# Public comments. Generate values outside the repo. Do not paste a real token here.
+# node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+COMMENT_ADMIN_TOKEN=
+TURNSTILE_SECRET=
+# Optional. Mixes into the stored IP hash so the raw address is not recoverable from the database.
+# COMMENT_IP_PEPPER=

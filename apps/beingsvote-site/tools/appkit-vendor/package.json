@@ -1,0 +1,13 @@
+{
+  "name": "beings-appkit-vendor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Builds public/vendor/appkit.js for beingsvote-site. Not run by Netlify.",
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "dependencies": {
+    "@reown/appkit": "2.0.0",
+    "@reown/appkit-adapter-ethers": "2.0.0",
+    "esbuild": "0.28.2"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "electionCode": "BEINGS-2026-EX411X",
+  "merkleRoot": "0xf580c50d057b20e5ce82d553734540b51dbf76f5e91f558cf8b731b20173b662",
+  "perQuestion": [
+    {
+      "valid": 5,
+      "blank": 1,
+      "overvote": 0,
+      "unclear": 0
+    },
+    {
+      "valid": 5,
+      "blank": 0,
+      "overvote": 1,
+      "unclear": 0
+    },
+    {
+      "valid": 6,
+      "blank": 0,
+      "overvote": 0,
+      "unclear": 0
+    },
+    {
+      "valid": 5,
+      "blank": 0,
+      "overvote": 0,
+      "unclear": 1
+    }
+  ],
+  "counts": {
+    "registered": 6,
+    "printed": 6,
+    "issued": 6,
+    "cast": 6,
+    "spoiled": 0,
+    "unusedReturned": 0,
+    "unissued": 0
+  },
+  "failedChecks": 0,
+  "postedFrom": "web-admin"
+}

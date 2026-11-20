@@ -1,0 +1,13 @@
+{
+  "electionCode": "BEINGS-2026-EX411X",
+  "tallyVersion": 1,
+  "nodeName": "Example Classroom 411 sample checker",
+  "ballotQuestionsChecked": 24,
+  "ballotQuestionsAgreed": 24,
+  "tallyMatches": true,
+  "reconciliationMatches": true,
+  "merkleMatches": true,
+  "merkleRoot": "0xf580c50d057b20e5ce82d553734540b51dbf76f5e91f558cf8b731b20173b662",
+  "resultsSha256": "0x0ff6d1f79341684eee466c7cfa40c0b45d8fc8bd308ac20e2f8be7ad8b560262",
+  "note": "Synthetic check of the six sample ballots. Posted by the example chain script after the tally."
+}

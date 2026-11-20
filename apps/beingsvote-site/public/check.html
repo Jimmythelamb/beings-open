@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-beings-page="check">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Check your own ballot on the public ledger. A receipt link fills in the election code. You type the ballot code.">
+<title>Check my ballot · B.E.I.N.G.S.</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/app.css">
+<script src="js/theme-init.js"></script>
+</head>
+<body>
+<a class="skip-link" id="skip" href="#main">Skip to the page content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/#/" aria-label="B.E.I.N.G.S. logo">
+      <video class="brand-logo" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture poster="brand/logo-A5-t.png" aria-label="B.E.I.N.G.S. logo">
+        <source src="brand/beings-logo.mp4" type="video/mp4">
+      </video>
+      <img class="brand-logo-still" src="brand/logo-A5-t.png" alt="B.E.I.N.G.S. logo">
+    </a>
+    <div class="header-aside">
+      <div id="stats-ticker" class="stats-ticker" role="region" aria-label="Live B.E.I.N.G.S. stats"><div class="ticker-bar"><span class="ticker-title">Live</span><p class="ticker-msg ticker-skeleton" aria-busy="true"><span class="sk"></span><span class="sk"></span><span class="sk"></span><span class="sr-only">Loading live stats…</span></p></div></div>
+      <div class="header-tools">
+        <span id="faucet-slot"></span>
+        <button id="theme-btn" class="icon-btn lg" type="button" aria-label="Colour theme"></button>
+        <button id="wallet-btn" class="btn btn-sm wallet-btn" type="button" aria-haspopup="dialog">Connect wallet</button>
+        <span id="wallet-extra" class="wallet-extra"></span>
+      </div>
+      <nav id="nav" aria-label="Main"><ul id="nav-list"></ul></nav>
+    </div>
+  </div>
+  <div class="wrap header-promo" id="header-promo"></div>
+  <div class="wrap role-row" id="role-row" hidden><div id="role-bar" class="role-bar" aria-label="Your access"></div></div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="wrap" id="app">
+    <noscript><div class="card"><h1>JavaScript is needed</h1><p>This page reads the public ledger in your browser, so it needs JavaScript turned on.</p></div></noscript>
+    <p class="loading" role="status">Loading…</p>
+  </div>
+</main>
+
+<div id="page-comments" class="wrap page-comments" hidden></div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Test network.</strong> This site reads <span id="footer-net"></span>.</p>
+    <p id="footer-links" class="small"></p>
+    <p class="small muted">The ledger holds results and fingerprints, never names. Ballot pictures are kept only for a limited time.</p>
+  </div>
+</footer>
+
+<dialog id="wallet-dialog" aria-labelledby="wallet-title">
+  <div class="dialog-card">
+    <div class="dialog-head">
+      <h2 id="wallet-title">Connect a wallet (optional)</h2>
+      <button id="wallet-close" class="icon-btn lg" type="button" aria-label="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div id="wallet-body"></div>
+  </div>
+</dialog>
+
+<dialog id="tx-dialog" aria-labelledby="tx-title">
+  <div class="dialog-card">
+    <div class="dialog-head">
+      <h2 id="tx-title">Confirm</h2>
+      <button id="tx-close" class="icon-btn lg" type="button" aria-label="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div id="tx-body"></div>
+  </div>
+</dialog>
+
+<dialog id="wc-dialog" aria-labelledby="wc-title">
+  <div class="dialog-card">
+    <div class="dialog-head">
+      <h2 id="wc-title">Connect a phone wallet</h2>
+      <button id="wc-close" class="icon-btn lg" type="button" aria-label="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div id="wc-body"></div>
+  </div>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<p id="route-status" class="sr-only" role="status" aria-live="polite"></p>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

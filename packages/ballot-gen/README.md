@@ -1,0 +1,110 @@
+# @beings/ballot-gen (M2: Ballot generation)
+
+Turns an **election file** and a **count** into everything needed to print and publish the ballots:
+
+| Output | File | For |
+|---|---|---|
+| Print-ready PDF: US Letter, one ballot per page, shuffled order | `ballots.pdf` | printing (custody document, see below) |
+| Ballot layout JSON: exact position of every oval relative to the corner marks | `ballot-layout.json` | scanner (M3), interface IC2 |
+| Election file with `ballotCodes` and `layoutHash` filled in | `election-file.json` | `createElection` (M4), publication |
+| Ballot list: codes, keys, `ballotListRoot` (core Merkle) | `ballot-list.json` | `createElection`, verifier (M6) |
+| Hashes and the `createElection` arguments | `manifest.json` | operator |
+
+`election-file.json` includes **`layoutHash`**: SHA-256 (64 lower-case hex) of the canonical JSON (RFC 8785) of
+`ballot-layout.json`. The election file hash that `createElection` records on-chain therefore covers the layout. The layout
+depends only on the election code, name and questions (never on the ballot codes or on the file hash), so there is no
+circularity. The field is optional in the core schema (older files stay valid) but this generator always writes and
+requires it. Given a file that already has a `layoutHash`, the generator checks it equals the layout it draws and refuses
+if not; given an older file without one, it adds it. `manifest.json` repeats it as `layoutHash` (and as `layoutSha256`, its
+older name).
+
+## Use
+
+```bash
+npm install && npm run build            # from the repo root; builds @beings/core first
+npx beings-ballots --election packages/ballot-gen/sample/classroom-election.json --count 34 --out out/
+# or without building:  npm run ballots:sample   (writes packages/ballot-gen/sample/output)
+```
+
+`--count` is the number of ballots to print **including spares**. Print more than `registeredVoters`; a spoiled ballot is
+replaced from the spares. The CLI warns when there are no spares. It refuses to overwrite an existing output directory
+unless `--force`, because a new run makes **new random codes** (the old PDF would no longer match the new list).
+
+If the election file already lists `ballotCodes`, those exact codes are printed (a reprint); `--count`, if given, must
+equal their number. If `electionCode` is missing, one is generated.
+
+As a library:
+
+```ts
+import { generateElection } from "@beings/ballot-gen";
+const g = await generateElection(electionJson, { count: 34 });
+g.pdf; g.layout; g.electionFile; g.ballotList.ballotListRoot; g.createElection;
+```
+
+## The ballot
+
+* **Voters only fill printed ovals; nothing is written.** Printed rule: "Fill in the oval completely. Do not write
+  anything on this ballot." and "Spoiled it? Ask for a new ballot." Plus pen/marker guidance and a panel of right and
+  wrong marks (design spec 6.2, 6.3).
+* **One unique ballot code per ballot** (core `newBallotCodes`, 12 Crockford characters, shown as `4F9Q-7M2X-HT8B`),
+  printed as text in the header and encoded in a **QR code**, and repeated as text on the tear-off receipt.
+  QR payload (the code the scanner reads): `BEINGS1|<electionCode>|<ballotCode>|L<layoutVersion>`.
+  The election code is also printed in full (`BEINGS-YYYY-XXXXXX`) beside that code, and again on the receipt.
+* **Corner registration marks**: four solid black squares. The top two are 14 mm in from the top and side edges; the
+  bottom two sit at y = 228 mm, **above the tear line** (see below). The top-left one is larger
+  (10 mm, the others 8 mm) so the scanner can tell the page orientation.
+* **Ovals**: 6.0 x 4.5 mm ellipses, light-grey drop-out outline, centres at least 8 mm apart (9 mm normally; the
+  generator tightens to 8.5 or 8 mm only when a long question needs it). Choice labels are full words beside each oval.
+* **Question and choice ids (layout v3).** Each question heading starts with its id in grey (`Q1` for `q1`), and every
+  oval has its choice id (`c1`, `c2`, ...) printed small (6.5 pt) in light grey (0.6) just to its right, with the choice
+  text after it. These are the ids the ledger stores: an answer `V:c2` on question `q1` means choice `c2` of `Q1`, so a voter
+  can read it straight off the ballot. The id sits at least 1.2 mm beyond the scanner's outer baseline ring
+  (x = oval centre + 4.8 mm) and the tests require at least 1 mm of clear paper; the scanner never reads it. The layout
+  lists each id's position as `idBox` (per question and per oval), and `redaction.keep` includes them.
+* No names, icons or serials on the ballot besides the random ballot code, the election code and these ids.
+* **Tear-off receipt.** The receipt is removed before scanning, so the **scanned body (everything above the dashed
+  tear line) is self-contained**: all four registration marks, every oval, the QR code and the ballot code are above
+  it. The bottom marks end 9 mm above the tear line (the tests require at least 8 mm) so a ragged tear cannot clip
+  them, and ovals, QR and code all lie inside the four marks. Below the line, under a vector scissors icon and
+  "TEAR HERE", the receipt holds the election name, the election code in text, the ballot code as text, a short note,
+  and a QR code that opens the Check my ballot page. That QR is an https link with the election code in the fragment
+  (`https://beingsvote.live/check.html#e=BEINGS-YYYY-XXXXXX`). It does not contain the ballot code. It sits below the
+  tear line, out of the corner-mark margins, and its finder pattern is smaller than a registration mark, so the scanner
+  does not treat it as the machine-read QR (`BEINGS1|...`) or as a corner mark. The machine-read QR, the marks and the
+  ovals stay above the tear line, in the same places as layout version 3.
+
+## Layout file (IC2, PROPOSED)
+
+Coordinates are in **millimetres in the marker frame**: origin = centre of the top-left marker, x to the right, y down;
+the frame is the rectangle spanned by the four marker centres (187.9 x 214 mm on Letter, layout version 3). Each oval gives `center`
+(mm) and `uv` (the same point as a fraction of the marker rectangle). A scanner finds the four marker centres in the
+photo, computes the homography, and maps every oval (and the sample/baseline rings, see `oval.sampleScale` and
+`oval.baselineRingScale`) into image pixels. `tearLineY` (same frame, mm; 227 on Letter) is the dashed tear line: everything the
+scanner reads lies above it, and `receiptStub` (the torn-off receipt) lies below it. Layout version 2 replaced version 1
+(whose bottom marks were on the receipt); version 3 adds the printed ids and `idBox` fields, and moves the choice text
+5 mm to the right to make room (the page geometry is otherwise unchanged, so capacity is too). The layout is validated against `schemas/ballot-layout.schema.json`.
+
+**The PDF is drawn from the same plan object as the layout** (`src/plan.ts`), so the two cannot drift; the tests also
+render the PDF and check marker, QR and oval positions in the pixels against the layout.
+
+## Privacy and custody
+
+* `ballots.pdf` is in **random print order** (CSPRNG Fisher-Yates), so page order says nothing. That order is not written
+  anywhere else. `election-file.json` and `ballot-list.json` list the codes **sorted**. Treat the PDF as a sensitive
+  custody document until the ballots are handed out: whoever holds it knows every valid code.
+* Ballot codes come only from the platform CSPRNG (`crypto.getRandomValues` via core `csprng`). Tests inject a
+  seeded generator through the `rng` option; never do that for a real election.
+
+## Limits and open questions
+
+* Built-in PDF fonts (Helvetica, Courier): **Latin-1 text only**. Other scripts fail with a clear error rather than
+  printing wrong. A Unicode font would need `fontkit` and a bundled font file.
+* One page per ballot: capacity is roughly 14 choices in one question, or 6+6, or 3+3+3, or 4 questions x 2 choices (the sample has 2+4+5 = 11); the bottom marks and the receipt take space from the questions area. Anything that does not fit fails with a clear error, never a cramped ballot.
+* One combined PDF; no per-ballot files.
+* `layoutHash` is optional in the core election-file schema, so files made before it existed still validate; only this generator requires it.
+* The layout schema lives here, not in core; it is a PROPOSED draft until M3 confirms it.
+
+## Test
+
+`npm test -w @beings/ballot-gen`. The PDF pixel tests need `pdftoppm` and `pdftotext` (poppler-utils) and are skipped
+if they are missing.

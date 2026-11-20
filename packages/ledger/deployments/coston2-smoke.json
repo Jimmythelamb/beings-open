@@ -1,0 +1,72 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "electionCode": "BEINGS-2026-2MJTDK",
+  "electionKey": "0x113a1a6c11cdd5ea6bbe0dde1ac04bfad1631a33c8be8e48e18cdb89dea9e540",
+  "ballotCode": "4F9Q7M2XHT8B",
+  "steps": [
+    {
+      "step": "ElectionRegistry.createElection",
+      "txHash": "0xb56811198a97d08b9379a9cbd7db07909ec7cdd354ba2757196c1162c85748c0",
+      "block": 37317154,
+      "gasUsed": 175636,
+      "gasPriceWei": "650000000000",
+      "feeWei": "114163400000000000",
+      "fee": "0.1141634"
+    },
+    {
+      "step": "ElectionRegistry.registerDevice",
+      "txHash": "0x02ccd32780bc421750a157d5a36c13abfd0fe4f1ced052ac3aa680732779f957",
+      "block": 37317156,
+      "gasUsed": 72518,
+      "gasPriceWei": "650000000000",
+      "feeWei": "47136700000000000",
+      "fee": "0.0471367"
+    },
+    {
+      "step": "ElectionRegistry.openElection",
+      "txHash": "0x061851d89c577a89e9094d95407531606f5fbbf206dcc01aa310c92e29722345",
+      "block": 37317160,
+      "gasUsed": 34106,
+      "gasPriceWei": "650000000000",
+      "feeWei": "22168900000000000",
+      "fee": "0.0221689"
+    },
+    {
+      "step": "BallotLedger.submitRecord (1 reading)",
+      "txHash": "0x8b41b8c5f64bf392a9ff8b7b9770264d7e3df6f5d6ed499971cf1276a0ec0cc7",
+      "block": 37317162,
+      "gasUsed": 167151,
+      "gasPriceWei": "650000000000",
+      "feeWei": "108648150000000000",
+      "fee": "0.10864815"
+    },
+    {
+      "step": "ElectionRegistry.closeElection",
+      "txHash": "0xac6516ac2dad6032fe8fa66045a2eb7118612118b9a5cebae813e26e5a6f0816",
+      "block": 37317163,
+      "gasUsed": 29402,
+      "gasPriceWei": "650000000000",
+      "feeWei": "19111300000000000",
+      "fee": "0.0191113"
+    },
+    {
+      "step": "Tally.postTally (1 question)",
+      "txHash": "0x0d38ed24eb5359ef960dccffd5e4a5f91e1b82b9765b52f9a173b96d8584fd4d",
+      "block": 37317165,
+      "gasUsed": 262297,
+      "gasPriceWei": "650000000000",
+      "feeWei": "170493050000000000",
+      "fee": "0.17049305"
+    }
+  ],
+  "totalGas": 741110,
+  "totalFee": "0.4817215",
+  "onChain": {
+    "failedChecks": 0,
+    "isFinal": true,
+    "inclusionProofOk": true
+  },
+  "balanceBefore": "95.1147001",
+  "balanceAfter": "94.6329786"
+}

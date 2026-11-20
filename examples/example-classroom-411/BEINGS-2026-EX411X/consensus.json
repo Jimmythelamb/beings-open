@@ -1,0 +1,28 @@
+{
+  "kind": "beings-consensus/1",
+  "passed": true,
+  "needsHumanReview": false,
+  "keyMode": "ballotKey",
+  "leafOrder": "Leaves are keccak256(key || keccak256(results string)), sorted ascending by that hash before sorted-pair hashing. The report lists ballots by key, ascending.",
+  "thresholds": {
+    "tight": {
+      "emptyBelow": 10,
+      "markedAbove": 55
+    },
+    "standard": {
+      "emptyBelow": 15,
+      "markedAbove": 50
+    },
+    "loose": {
+      "emptyBelow": 20,
+      "markedAbove": 45
+    }
+  },
+  "roots": {
+    "tight": "0x4e3003c2b3550da233327a4f548caf80142353c24ee12075ce02d93a263def0e",
+    "standard": "0x4e3003c2b3550da233327a4f548caf80142353c24ee12075ce02d93a263def0e",
+    "loose": "0x4e3003c2b3550da233327a4f548caf80142353c24ee12075ce02d93a263def0e"
+  },
+  "ballots": 6,
+  "flags": []
+}

@@ -1,0 +1,39 @@
+{
+  "record": {
+    "schemaVersion": "0.1",
+    "electionCode": "BEINGS-2026-K7M4Q2",
+    "ballotCode": "4F9Q7M2XHT8B",
+    "results": {
+      "q1": "V:c1",
+      "q2": "V:c2"
+    },
+    "readings": [
+      {
+        "device": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+        "imageSha256": "3dd3f8d1db39a536c4f48318eda8e4a804f53fbc2b25b94e3aa98b201be050da",
+        "fillScores": {
+          "q1": {
+            "c1": 92,
+            "c2": 3,
+            "c3": 0
+          },
+          "q2": {
+            "c1": 2,
+            "c2": 88
+          }
+        },
+        "results": {
+          "q1": "V:c1",
+          "q2": "V:c2"
+        },
+        "signature": "0x30fa8f1a16f35738fcf7f11670389c25017dc0acb076596adbcc3eb221e3c4eb1b890ca49cecc9b942b382d2787784d6bf356fd6126cd9a45e164ec4178e880e1c"
+      }
+    ],
+    "review": {
+      "required": false
+    },
+    "scannedOn": "2026-11-20"
+  },
+  "recordSha256": "8c181682a622c5813d695f59c048da7f3c055ec684d0805b7e4f4f033c54b14b",
+  "jcsKeccak": "0x01c8fbfb4f329bbd14a750097e05ebc231ed382ecdd60327b43e05e354569c9a"
+}

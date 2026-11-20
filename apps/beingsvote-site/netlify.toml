@@ -1,0 +1,68 @@
+# beingsvote.live: standalone Netlify site (temporary ballot-image store for B.E.I.N.G.S.).
+# In Netlify, set the site's "Base directory" to apps/beingsvote-site (UI setting). Nothing here refers to any other site.
+
+[build]
+  publish = "public"
+  # Rebuild the Windows scanner-helper zip (sources + vendored pdf-lib + install scripts) into public/downloads.
+  # The base directory is this site, so the script path climbs back to the monorepo.
+  command = "node ../../packages/scanner-helper/tools/build-windows-bundle.mjs"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Static pages: never cached by shared caches, never indexed.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Cache-Control = "no-store"
+
+# The page only talks to: itself, the Cloudflare ballot-image Worker (R2), the Flare Coston2 RPC and block explorer
+# (read-only), the jsDelivr copy of ethers (pinned with a subresource-integrity hash; a local copy in /vendor is used
+# if it fails), an IPFS gateway, and, when the teacher is on the polling PC, the optional local scanner helper at
+# http://127.0.0.1:8765 (or localhost:8765). Ballot images are shown from blob: URLs created in the browser. The
+# header logo video is same-origin (media-src 'self'); its poster is a same-origin png (img-src 'self'). The contact
+# form posts to this site (form-action 'self' and connect-src 'self'). Comment spam protection, when a Turnstile
+# site key is set, loads https://challenges.cloudflare.com. No inline script or style is used anywhere.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self'; img-src 'self' blob: data: https://api.web3modal.com https://api.web3modal.org https://explorer-api.walletconnect.com https://walletconnect.com https://walletconnect.org; media-src 'self'; frame-src blob: https://verify.walletconnect.com https://verify.walletconnect.org https://secure.walletconnect.com https://secure.walletconnect.org https://challenges.cloudflare.com; connect-src 'self' https://beings-ballot-images.beingsvote-test.workers.dev https://challenges.cloudflare.com https://coston2-api.flare.network https://coston2-explorer.flare.network https://ipfs.io https://rpc.walletconnect.com https://rpc.walletconnect.org https://relay.walletconnect.com https://relay.walletconnect.org https://echo.walletconnect.com https://echo.walletconnect.org https://pulse.walletconnect.com https://pulse.walletconnect.org https://api.web3modal.com https://api.web3modal.org https://explorer-api.walletconnect.com wss://relay.walletconnect.com wss://relay.walletconnect.org https://verify.walletconnect.com https://verify.walletconnect.org http://127.0.0.1:8765 http://[::1]:8765 http://localhost:8765; font-src 'self' https://fonts.reown.com; manifest-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    X-Frame-Options = "DENY"
+
+# The pinned ethers copy never changes for a given version, so it can be cached.
+[[headers]]
+  for = "/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Header logo video and still. Static brand files, safe to cache for a day.
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Technical whitepaper. A real file in public/whitepaper/. This site has no SPA fallback and no rewrite,
+# so the path is the file. These headers are repeated here so the PDF response stays a PDF even if only
+# the most specific header rule is applied. object-src 'self' lets the browser's PDF viewer render it.
+[[headers]]
+  for = "/whitepaper/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "inline"
+    X-Content-Type-Options = "nosniff"
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Cache-Control = "no-store"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'none'; object-src 'self'; frame-ancestors 'none'; base-uri 'none'"

@@ -1,0 +1,9 @@
+{
+  "name": "beings-scanner-helper-bundle-deps",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Pinned production dependencies for the Windows scanner helper download.",
+  "dependencies": {
+    "pdf-lib": "1.17.1"
+  }
+}

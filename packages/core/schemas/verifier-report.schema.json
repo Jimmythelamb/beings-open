@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B.E.I.N.G.S. verifier report (draft)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "electionCode",
+    "tallyVersion",
+    "node",
+    "software",
+    "ledgerHead",
+    "scope",
+    "hashChecks",
+    "readChecks",
+    "tally",
+    "reconciliation",
+    "merkle",
+    "createdAt",
+    "signature"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result": {
+      "type": "string",
+      "pattern": "^(V:c[0-9]{1,3}(\\+c[0-9]{1,3})*|B|O|U)$"
+    },
+    "ballotCode": {
+      "type": "string",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{12}$"
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1"
+    },
+    "electionCode": {
+      "type": "string",
+      "pattern": "^BEINGS-[0-9]{4}-[0-9A-HJKMNP-TV-Z]{6}$"
+    },
+    "tallyVersion": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "the tally version that was checked"
+    },
+    "node": {
+      "type": "object",
+      "required": [
+        "address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "address": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]{40}$"
+        },
+        "operator": {
+          "type": "string",
+          "description": "optional, self-declared (for example a school or an observer group)"
+        }
+      }
+    },
+    "software": {
+      "type": "object",
+      "required": [
+        "name",
+        "version",
+        "omrBuild"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "omrBuild": {
+          "type": "string",
+          "description": "which OMR implementation read the ovals (independent builds are encouraged)"
+        },
+        "sourceSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "ledgerHead": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{64}$",
+      "description": "ledger head hash when the node read it"
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "mode",
+        "ballotsChecked"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "all",
+            "sample"
+          ]
+        },
+        "ballotsChecked": {
+          "$ref": "#/definitions/count"
+        },
+        "sampleSeed": {
+          "type": "string"
+        }
+      }
+    },
+    "hashChecks": {
+      "type": "object",
+      "required": [
+        "checked",
+        "failed"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "checked": {
+          "$ref": "#/definitions/count"
+        },
+        "failed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "ballotCode",
+              "reason"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "ballotCode": {
+                "$ref": "#/definitions/ballotCode"
+              },
+              "reason": {
+                "enum": [
+                  "hash-mismatch",
+                  "image-missing",
+                  "image-retired",
+                  "image-unreadable"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "readChecks": {
+      "type": "object",
+      "required": [
+        "ballotQuestionsChecked",
+        "agreed",
+        "disagreed",
+        "disagreements"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ballotQuestionsChecked": {
+          "$ref": "#/definitions/count"
+        },
+        "agreed": {
+          "$ref": "#/definitions/count"
+        },
+        "disagreed": {
+          "$ref": "#/definitions/count"
+        },
+        "disagreements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "ballotCode",
+              "questionId",
+              "posted",
+              "nodeReading"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "ballotCode": {
+                "$ref": "#/definitions/ballotCode"
+              },
+              "questionId": {
+                "type": "string",
+                "pattern": "^q[0-9]{1,3}$"
+              },
+              "posted": {
+                "$ref": "#/definitions/result"
+              },
+              "nodeReading": {
+                "$ref": "#/definitions/result"
+              },
+              "nodeFill": {
+                "type": "object",
+                "description": "choiceId -> fill score 0-100 (optional)",
+                "additionalProperties": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              },
+              "postedWasReviewed": {
+                "type": "boolean",
+                "description": "true if the posted result came from human review"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tally": {
+      "type": "object",
+      "required": [
+        "matches"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "matches": {
+          "type": "boolean"
+        }
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "required": [
+        "matches"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "matches": {
+          "type": "boolean"
+        },
+        "failedChecks": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        }
+      }
+    },
+    "merkle": {
+      "type": "object",
+      "required": [
+        "recomputedRoot",
+        "matches"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "recomputedRoot": {
+          "type": "string",
+          "pattern": "^0x[0-9a-f]{64}$"
+        },
+        "matches": {
+          "type": "boolean"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{130}$"
+    }
+  }
+}

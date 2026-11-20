@@ -1,0 +1,29 @@
+{
+  "tool": "@beings/ballot-gen",
+  "schemaVersion": "0.1",
+  "electionCode": "BEINGS-2026-4CRWX2",
+  "ballots": 34,
+  "files": {
+    "pdf": "ballots.pdf",
+    "layout": "ballot-layout.json",
+    "electionFile": "election-file.json",
+    "ballotList": "ballot-list.json",
+    "manifest": "manifest.json"
+  },
+  "electionFileSha256": "9b0f9112185049060b61021f9643d3cb7080dbfcf2ebb3924db390a65bc14b18",
+  "electionFileHashNote": "SHA-256 of the canonical JSON (RFC 8785) of election-file.json, not of its pretty-printed bytes",
+  "layoutHash": "6eb381631b0ec58595ff1d21cce1e1cc612d13cb99cd0ad83b45489f1ff115e2",
+  "layoutSha256": "6eb381631b0ec58595ff1d21cce1e1cc612d13cb99cd0ad83b45489f1ff115e2",
+  "layoutHashNote": "SHA-256 of the canonical JSON of ballot-layout.json. The same value is the layoutHash field INSIDE election-file.json, so the election file hash that goes on-chain covers the layout. layoutSha256 is the older name of the same value.",
+  "ballotListRoot": "0x37937d0d0afac03a1a2107d704ceeda2b2dbc4d2d60971409170e8500c724105",
+  "createElection": {
+    "electionCode": "BEINGS-2026-4CRWX2",
+    "electionKey": "0x295b9ab082f3aa26f44be188a6875800eba91602309fa46d0526247af6233aaf",
+    "fileSha256": "0x9b0f9112185049060b61021f9643d3cb7080dbfcf2ebb3924db390a65bc14b18",
+    "ballotCount": 34,
+    "registeredVoters": 30,
+    "quorum": 1,
+    "ballotListRoot": "0x37937d0d0afac03a1a2107d704ceeda2b2dbc4d2d60971409170e8500c724105"
+  },
+  "warnings": []
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@beings/ballot-gen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. M2 ballot generator: unique ballot codes, print-ready PDF (Letter), ballot layout JSON, ballot list and its Merkle root",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schemas/*": "./schemas/*"
+  },
+  "bin": {
+    "beings-ballots": "./dist/cli.js"
+  },
+  "files": ["dist", "schemas", "sample"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build -w @beings/core",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sample": "tsx src/cli.ts --election sample/classroom-election.json --count 34 --out sample/output --force"
+  },
+  "dependencies": {
+    "@beings/core": "*",
+    "ajv": "^8.17.1",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/pngjs": "^6.0.5",
+    "@types/qrcode": "^1.5.6",
+    "jsqr": "^1.4.0",
+    "pngjs": "^5.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

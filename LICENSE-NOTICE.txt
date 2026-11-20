@@ -1,0 +1,38 @@
+B.E.I.N.G.S. public mirror (v0.13) — licence notice
+===================================================
+
+Copyright 2026 :James-Hugh: Lamb.
+
+This repository is mixed-licence.
+
+1. Software: all source code, smart-contract source, scripts, tests,
+   configuration, deployment-address files and the bundled scanner
+   helper (everything not listed in item 2):
+   Apache License 2.0. The full licence is in LICENSE.
+   http://www.apache.org/licenses/LICENSE-2.0
+
+2. Documentation and example data: docs/, examples/ (the synthetic
+   Example Classroom 411), the whitepaper PDF under
+   apps/beingsvote-site/public/whitepaper/, and the Markdown README
+   files: Creative Commons Attribution 4.0 International (CC BY 4.0).
+   The full legal code is in LICENSE-DOCS-CC-BY-4.0.txt.
+   https://creativecommons.org/licenses/by/4.0/
+
+3. Trademark and artwork carve-out (applies to every file):
+   B.E.I.N.G.S. is a trademark of :James-Hugh: Lamb. The B.E.I.N.G.S.
+   logo and coin designs are artwork of :James-Hugh: Lamb. and are
+   not licensed under Apache License 2.0 or CC BY 4.0.
+
+   The logo, coin artwork, and spin videos are omitted from this
+   repository so there is no doubt about the licence.
+
+4. Coston2 contract addresses are public test-network facts, not a
+   licence grant of the trademark.
+
+Third-party files under apps/beingsvote-site/public/vendor/ and inside
+the scanner-helper downloads keep their own upstream licences.
+
+No file in this repository grants patent rights beyond those already
+stated in Apache License 2.0 section 3, which applies only to the
+software licensed under that licence. CC BY 4.0 does not license
+patents or trademarks.

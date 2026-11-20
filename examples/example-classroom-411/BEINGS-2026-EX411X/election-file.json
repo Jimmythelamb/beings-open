@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "0.1",
+  "version": 1,
+  "name": "Example Classroom 411",
+  "organizerPublicKey": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+  "deviceAddresses": [
+    "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Should we have a pizza party on Friday?",
+      "maxMarks": 1,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Yes"
+        },
+        {
+          "id": "c2",
+          "text": "No"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Who should be class representative?",
+      "maxMarks": 1,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Amara Okonkwo"
+        },
+        {
+          "id": "c2",
+          "text": "Ben Cho"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Which activities should we pick? Up to two.",
+      "maxMarks": 2,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Science museum"
+        },
+        {
+          "id": "c2",
+          "text": "Aquarium"
+        },
+        {
+          "id": "c3",
+          "text": "Park cleanup"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "When should the class meeting be?",
+      "maxMarks": 1,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Monday"
+        },
+        {
+          "id": "c2",
+          "text": "Friday"
+        }
+      ]
+    }
+  ],
+  "resultRules": {
+    "emptyBelow": 15,
+    "markedAbove": 50,
+    "results": [
+      "V",
+      "B",
+      "O",
+      "U"
+    ],
+    "abstainButton": false
+  },
+  "privacy": {
+    "redactImages": true,
+    "publishOrder": "sorted",
+    "timeGranularity": "event",
+    "minBreakdownSize": 10
+  },
+  "imageStore": {
+    "type": "other",
+    "description": "Synthetic sample scans shipped with the website under /examples/BEINGS-2026-EX411X/images/. They are not stored in the R2 image worker."
+  },
+  "imageRetention": {
+    "basis": "organizer-policy",
+    "days": 30,
+    "afterRetention": "delete"
+  },
+  "registeredVoters": 6,
+  "approvedAppHashes": [
+    "06694fe1cdf4766e89d713efca9c78dcf82f413b8de2907fff946aa895695527"
+  ],
+  "quorum": 1,
+  "opensAt": "2026-11-18T16:00:00.000Z",
+  "closesAt": "2026-11-18T20:00:00.000Z",
+  "electionCode": "BEINGS-2026-EX411X",
+  "ballotCodes": [
+    "SAMP41100001",
+    "SAMP41100002",
+    "SAMP41100003",
+    "SAMP41100004",
+    "SAMP41100005",
+    "SAMP41100006"
+  ],
+  "layoutHash": "673293e5e1e0ca0dafa8e08597c01da79e8689c34b37b2ee8d44e5d4d9a64429",
+  "publicBallotImages": true
+}

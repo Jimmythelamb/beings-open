@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# The published whitepaper must stay byte-for-byte identical (SHA-256 is pinned).
+apps/beingsvote-site/public/whitepaper/*.pdf binary
+# Windows batch and the installer must keep CR LF. cmd.exe mishandles LF-only scripts.
+packages/scanner-helper/bundle/*.cmd text eol=crlf
+packages/scanner-helper/bundle/*.ps1 text eol=crlf
+packages/scanner-helper/bundle/README-INSTALL.txt text eol=crlf

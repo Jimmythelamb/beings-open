@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "0.1",
+  "electionCode": "BEINGS-2026-EX411X",
+  "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+  "count": 6,
+  "ballotListRoot": "0x7a2f4adf27102402bf62c6faf76547aa636ae2c5f3b4873f7a5ea6195e62c707",
+  "ballots": [
+    {
+      "ballotCode": "SAMP41100001",
+      "ballotKey": "0x31af239ba8df16ec3c7c965f3f0bacbaf78b2f51238576cd353f627b7f82931c"
+    },
+    {
+      "ballotCode": "SAMP41100002",
+      "ballotKey": "0xea36b902db2a6e1a50f56ba8c0beb5b5777728bd784c8820a495b76ec4dafd74"
+    },
+    {
+      "ballotCode": "SAMP41100003",
+      "ballotKey": "0x8b3c6ede7a80ed6df515be6fa36301210db6b9e0434ff79c3f4c1000898fc8e5"
+    },
+    {
+      "ballotCode": "SAMP41100004",
+      "ballotKey": "0x48e7e69199266023829df1a74341e97ef0d8df9eb0b93f9fecb3cb7aba67a6d3"
+    },
+    {
+      "ballotCode": "SAMP41100005",
+      "ballotKey": "0x785b794dc11e1343758048024390e3fca76987f8701a27d46b32af036ef0ab74"
+    },
+    {
+      "ballotCode": "SAMP41100006",
+      "ballotKey": "0xdaa54fee6afd1484b58d0c6cc7eb3ef9ba64933322b4f818a3ee3c94b72bd968"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "name": "spec 8.3 worked example (all pass)",
+    "organizer": {
+      "registered": 120,
+      "issued": 123,
+      "unusedReturned": 1
+    },
+    "ledger": {
+      "registeredInElectionFile": 120,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 0,
+    "counts": {
+      "registered": 120,
+      "printed": 130,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 1,
+      "unissued": 7
+    }
+  },
+  {
+    "name": "spec 11.4 provisional example (R4)",
+    "organizer": {
+      "registered": 120,
+      "issued": 123,
+      "unusedReturned": 0
+    },
+    "ledger": {
+      "registeredInElectionFile": 120,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 8,
+    "counts": {
+      "registered": 120,
+      "printed": 130,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 0,
+      "unissued": 7
+    }
+  },
+  {
+    "name": "R1 and R4 (cast > issued)",
+    "organizer": {
+      "registered": 120,
+      "issued": 118,
+      "unusedReturned": 0
+    },
+    "ledger": {
+      "registeredInElectionFile": 120,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 0,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 9,
+    "counts": {
+      "registered": 120,
+      "printed": 130,
+      "issued": 118,
+      "cast": 119,
+      "spoiled": 0,
+      "unusedReturned": 0,
+      "unissued": 12
+    }
+  },
+  {
+    "name": "R2 issued - spoiled > registered",
+    "organizer": {
+      "registered": 119,
+      "issued": 123,
+      "unusedReturned": 1
+    },
+    "ledger": {
+      "registeredInElectionFile": 119,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 2,
+    "counts": {
+      "registered": 119,
+      "printed": 130,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 1,
+      "unissued": 7
+    }
+  },
+  {
+    "name": "R3 issued > printed",
+    "organizer": {
+      "registered": 120,
+      "issued": 123,
+      "unusedReturned": 1
+    },
+    "ledger": {
+      "registeredInElectionFile": 120,
+      "printed": 120,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 4,
+    "counts": {
+      "registered": 120,
+      "printed": 120,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 1,
+      "unissued": 0
+    }
+  },
+  {
+    "name": "R5 question does not sum to cast",
+    "organizer": {
+      "registered": 120,
+      "issued": 123,
+      "unusedReturned": 1
+    },
+    "ledger": {
+      "registeredInElectionFile": 120,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 4
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 16,
+    "counts": {
+      "registered": 120,
+      "printed": 130,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 1,
+      "unissued": 7
+    }
+  },
+  {
+    "name": "R6 register changed",
+    "organizer": {
+      "registered": 121,
+      "issued": 123,
+      "unusedReturned": 1
+    },
+    "ledger": {
+      "registeredInElectionFile": 120,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 32,
+    "counts": {
+      "registered": 121,
+      "printed": 130,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 1,
+      "unissued": 7
+    }
+  },
+  {
+    "name": "no register: R2 skipped, R6 needs 0 in file",
+    "organizer": {
+      "registered": 0,
+      "issued": 123,
+      "unusedReturned": 1
+    },
+    "ledger": {
+      "registeredInElectionFile": 0,
+      "printed": 130,
+      "cast": 119,
+      "spoiled": 3,
+      "perQuestion": {
+        "q1": {
+          "valid": 100,
+          "blank": 8,
+          "overvote": 6,
+          "unclear": 5
+        },
+        "q2": {
+          "valid": 105,
+          "blank": 9,
+          "overvote": 3,
+          "unclear": 2
+        }
+      }
+    },
+    "failedChecks": 0,
+    "counts": {
+      "registered": 0,
+      "printed": 130,
+      "issued": 123,
+      "cast": 119,
+      "spoiled": 3,
+      "unusedReturned": 1,
+      "unissued": 7
+    }
+  }
+]

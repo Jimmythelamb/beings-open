@@ -1,0 +1,218 @@
+{
+  "electionCode": "BEINGS-2026-EX411X",
+  "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+  "method": "createPooledElection",
+  "cid": "site:/examples/BEINGS-2026-EX411X/election-file.json",
+  "resultsCid": "site:/examples/BEINGS-2026-EX411X/results.json",
+  "opensAt": "2026-11-18T16:00:00.000Z",
+  "closesAt": "2026-11-18T20:00:00.000Z",
+  "opensAtUnix": 1795017600,
+  "closesAtUnix": 1795032000,
+  "fileSha256": "0xf1eb5000a6d149c2fe5e538181952bd76db5fb7fc4b6254a864eca7795c5cd78",
+  "ballotListRoot": "0x7a2f4adf27102402bf62c6faf76547aa636ae2c5f3b4873f7a5ea6195e62c707",
+  "ballotCount": 6,
+  "registeredVoters": 6,
+  "quorum": 1,
+  "deviceAddress": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+  "deviceDerivation": "BEINGS example scanner for BEINGS-2026-EX411X. This key signs sample readings only. It is not a funded wallet.",
+  "appHash": "0x06694fe1cdf4766e89d713efca9c78dcf82f413b8de2907fff946aa895695527",
+  "staffKind": 1,
+  "lockAttestation": "I have reviewed this staff roster and confirm it is accurate and complete",
+  "testStatement": "This election was used and identified as a test election",
+  "rosterHash": "0x36ff5d4ab132d2d437f432172914c4fd18e3e83e299e0676d9b198c5918ae76a",
+  "merkleRoot": "0xf580c50d057b20e5ce82d553734540b51dbf76f5e91f558cf8b731b20173b662",
+  "resultsSha256": "0x0ff6d1f79341684eee466c7cfa40c0b45d8fc8bd308ac20e2f8be7ad8b560262",
+  "perQuestion": [
+    {
+      "valid": 5,
+      "blank": 1,
+      "overvote": 0,
+      "unclear": 0
+    },
+    {
+      "valid": 5,
+      "blank": 0,
+      "overvote": 1,
+      "unclear": 0
+    },
+    {
+      "valid": 6,
+      "blank": 0,
+      "overvote": 0,
+      "unclear": 0
+    },
+    {
+      "valid": 5,
+      "blank": 0,
+      "overvote": 0,
+      "unclear": 1
+    }
+  ],
+  "registered": 6,
+  "issued": 6,
+  "unusedReturned": 0,
+  "verifier": {
+    "name": "Example Classroom 411 sample checker",
+    "infoCid": "site:/examples/BEINGS-2026-EX411X/verifier-report.json",
+    "tallyVersion": 1,
+    "checked": 24,
+    "agreed": 24,
+    "reportSha256": "0x41ea66369372330c841a0c063df73d1153a0e0c2a7c45b35094d6a7d1b82201c"
+  },
+  "submissions": [
+    {
+      "ballotCode": "SAMP41100001",
+      "submission": {
+        "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+        "ballotKey": "0x31af239ba8df16ec3c7c965f3f0bacbaf78b2f51238576cd353f627b7f82931c",
+        "results": "V:c1|V:c1|V:c1+c2|V:c2",
+        "imageSha256": "0x5e3c317aa0459ee70891506aadbbd7c862025ee3bdb82d0d2956dccba9010f0f",
+        "recordSha256": "0x451119a1d645c39739ed5c6c45a038d10dbfab62032ec6656c03f19131c1acd0",
+        "readings": [
+          {
+            "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+            "imageSha256": "0x5e3c317aa0459ee70891506aadbbd7c862025ee3bdb82d0d2956dccba9010f0f",
+            "scoresHash": "0xd35d3d8289d230714994893fb3d4266b6899337acc8dd5ff0a1f79cdfb166871",
+            "sig": "0xbe974ae6d93fc8349f0a7a657fcb5d993a6016fbda2e7373f2c467efaef96de51fff18c2f462ee8f1954d4beffe374d3c40c7d4d505b333512650bf16487261d1b"
+          }
+        ],
+        "reviewer": "0x0000000000000000000000000000000000000000",
+        "reviewerSig": "0x"
+      },
+      "proof": [
+        "0x48e7e69199266023829df1a74341e97ef0d8df9eb0b93f9fecb3cb7aba67a6d3",
+        "0xd4ca6101dd5d5de3ae98c73d1c221ad178f7437187b2bad9bd5e141fa88b7d4d",
+        "0x863856d11e913635ca9764d18de6961532f1a3065a1425c5de96a23952f803fc"
+      ],
+      "rootIndex": 0
+    },
+    {
+      "ballotCode": "SAMP41100002",
+      "submission": {
+        "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+        "ballotKey": "0xea36b902db2a6e1a50f56ba8c0beb5b5777728bd784c8820a495b76ec4dafd74",
+        "results": "V:c2|V:c2|V:c3|V:c1",
+        "imageSha256": "0x51d30e3f65401d4a361202f20e22113db6a5bae7cd89bc7f6d7131328b25121a",
+        "recordSha256": "0xeaa45c9e58a3a44181cae55a746720ea76a14666d0659681f70978b5653fc5a7",
+        "readings": [
+          {
+            "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+            "imageSha256": "0x51d30e3f65401d4a361202f20e22113db6a5bae7cd89bc7f6d7131328b25121a",
+            "scoresHash": "0xdf8824ed0cf65844c97d67a75b8e02dd1dcda28c18e97fa1df964e1db1a1d94a",
+            "sig": "0x8557f5df0a15486ec65db18f165f14f3da7f7117d589c75accfa182edb456c965169d94fb7b54885cac2868860cd92314644c9e94017de3103b6dceffb2f0a951c"
+          }
+        ],
+        "reviewer": "0x0000000000000000000000000000000000000000",
+        "reviewerSig": "0x"
+      },
+      "proof": [
+        "0xdaa54fee6afd1484b58d0c6cc7eb3ef9ba64933322b4f818a3ee3c94b72bd968",
+        "0x7fe396aa44fe250ccb8849932aa512182045b451a3082d1c829325bb32c3a637"
+      ],
+      "rootIndex": 0
+    },
+    {
+      "ballotCode": "SAMP41100003",
+      "submission": {
+        "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+        "ballotKey": "0x8b3c6ede7a80ed6df515be6fa36301210db6b9e0434ff79c3f4c1000898fc8e5",
+        "results": "V:c1|V:c1|V:c2+c3|V:c1",
+        "imageSha256": "0xadac039af54ecc0cae3b3de7591d85480d8f430af48ff5772c85fc32dee136cb",
+        "recordSha256": "0xc93eb39c4bc06f43151b6e6968a0eccc23b740bf6a2ffacd47055aaa01ee6800",
+        "readings": [
+          {
+            "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+            "imageSha256": "0xadac039af54ecc0cae3b3de7591d85480d8f430af48ff5772c85fc32dee136cb",
+            "scoresHash": "0x52747a2bf6b51ba1f01faac93e2c26ace66aef12e3fb1ccbc07c57512fc94c00",
+            "sig": "0xb3d2a0e4b47dda0aba30618e075376aa670fded0d70eaafb20ba22c8cf6fb446523878bdf7a8ce529b2962f9141af86d9a028f5f4efa63eaa4a732e650582bb81c"
+          }
+        ],
+        "reviewer": "0x0000000000000000000000000000000000000000",
+        "reviewerSig": "0x"
+      },
+      "proof": [
+        "0x785b794dc11e1343758048024390e3fca76987f8701a27d46b32af036ef0ab74",
+        "0x1e879718b02ac05d0ee68859a5a50e2d5539b2ead58f1f889527e007e34531b4",
+        "0x863856d11e913635ca9764d18de6961532f1a3065a1425c5de96a23952f803fc"
+      ],
+      "rootIndex": 0
+    },
+    {
+      "ballotCode": "SAMP41100004",
+      "submission": {
+        "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+        "ballotKey": "0x48e7e69199266023829df1a74341e97ef0d8df9eb0b93f9fecb3cb7aba67a6d3",
+        "results": "B|V:c2|V:c1|V:c1",
+        "imageSha256": "0xfff648ec2bd35f00cb705f426a5038f123ed5491c4a5f30385140cad24b598a0",
+        "recordSha256": "0x2d070536814dfcc0083ec4f729e0d17fb2f5ec478b21168783d7510b18e2ef93",
+        "readings": [
+          {
+            "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+            "imageSha256": "0xfff648ec2bd35f00cb705f426a5038f123ed5491c4a5f30385140cad24b598a0",
+            "scoresHash": "0xaeb7cbb29d842d6ea3b1f7790e1a09d386d2449a363f97fd628d94b7ca61cf19",
+            "sig": "0x7c6bc793e86501dd25d49412e90bfbccfeac908cae3ba5b1368eb3d02c7170c6194f34344b9c29c3bae2f0281cbc56a9a28963b7635e4ff38c9775462ae13bca1b"
+          }
+        ],
+        "reviewer": "0x0000000000000000000000000000000000000000",
+        "reviewerSig": "0x"
+      },
+      "proof": [
+        "0x31af239ba8df16ec3c7c965f3f0bacbaf78b2f51238576cd353f627b7f82931c",
+        "0xd4ca6101dd5d5de3ae98c73d1c221ad178f7437187b2bad9bd5e141fa88b7d4d",
+        "0x863856d11e913635ca9764d18de6961532f1a3065a1425c5de96a23952f803fc"
+      ],
+      "rootIndex": 0
+    },
+    {
+      "ballotCode": "SAMP41100005",
+      "submission": {
+        "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+        "ballotKey": "0x785b794dc11e1343758048024390e3fca76987f8701a27d46b32af036ef0ab74",
+        "results": "V:c2|O|V:c3|V:c2",
+        "imageSha256": "0xbf65c80fbcf65cd0176b8aa9f02ea4aac5dbc097a7e578e3640ec9b5b3364ef5",
+        "recordSha256": "0x761b3d4e259375e478686ff050a4cf16b90a3183c16fe946770abf523d3c584b",
+        "readings": [
+          {
+            "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+            "imageSha256": "0xbf65c80fbcf65cd0176b8aa9f02ea4aac5dbc097a7e578e3640ec9b5b3364ef5",
+            "scoresHash": "0x90a71e8fe3c7902bf7071e425182ca32d3c05df8a675d8424c774b31413614c2",
+            "sig": "0x7d0a0f0a40f43625d4cee9777c6a237a1c95645b157c0946114319038b0ff84f5b3b4c69bd43524cc3b4054d6db56f6e1fb7f69834fc4af5acc93f32bad5eef91c"
+          }
+        ],
+        "reviewer": "0x0000000000000000000000000000000000000000",
+        "reviewerSig": "0x"
+      },
+      "proof": [
+        "0x8b3c6ede7a80ed6df515be6fa36301210db6b9e0434ff79c3f4c1000898fc8e5",
+        "0x1e879718b02ac05d0ee68859a5a50e2d5539b2ead58f1f889527e007e34531b4",
+        "0x863856d11e913635ca9764d18de6961532f1a3065a1425c5de96a23952f803fc"
+      ],
+      "rootIndex": 0
+    },
+    {
+      "ballotCode": "SAMP41100006",
+      "submission": {
+        "electionKey": "0x82fd777484c27839296a2d6d3ba6f6afa0c0a8f618b4a3dc67e753fa979a5e51",
+        "ballotKey": "0xdaa54fee6afd1484b58d0c6cc7eb3ef9ba64933322b4f818a3ee3c94b72bd968",
+        "results": "V:c1|V:c2|V:c1+c3|U",
+        "imageSha256": "0xf5a6b08439ccd5bac5118128530f6d3feaf5caa097b86de2f23da55e03b82a3a",
+        "recordSha256": "0xd47039a8909650519893e4d40f78a74a896db89eff96b8211d34ef8797f35b45",
+        "readings": [
+          {
+            "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+            "imageSha256": "0xf5a6b08439ccd5bac5118128530f6d3feaf5caa097b86de2f23da55e03b82a3a",
+            "scoresHash": "0x48bed226bea3378ec884d206e4569473c4eea01fcf27e5e813c32423ba768585",
+            "sig": "0x39b8cafb6e44a7413e790b87c941c6405bb83b2ca866776d54102dcca540f25631dec2f357da1b1f1bc29234773e5d07a3aa96d16f5081a3396e727e3cd474b01b"
+          }
+        ],
+        "reviewer": "0x0000000000000000000000000000000000000000",
+        "reviewerSig": "0x"
+      },
+      "proof": [
+        "0xea36b902db2a6e1a50f56ba8c0beb5b5777728bd784c8820a495b76ec4dafd74",
+        "0x7fe396aa44fe250ccb8849932aa512182045b451a3082d1c829325bb32c3a637"
+      ],
+      "rootIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "beings-ballot-images",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "upload_source_maps": true,
+  // Existing account. Do not create a second bucket or change jurisdiction.
+  "account_id": "23463786666b4b6a7da866b52a5a2d64",
+  // Public workers.dev hostname used by beingsvote.live. Do not also attach a beingsvote.live route.
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://beingsvote.live",
+    // Ballot-pool contracts on Coston2 (deployed 2026-11-14, block 37873904). Same values as the defaults in ../src/config.ts.
+    // New elections use these. A dashboard binding with the same name overrides the value.
+    "LEDGER_ADDRESS": "0x5d00bE9A32DcF1FcDe9475C8Be874aE8af0fCf0b",
+    "REGISTRY_ADDRESS": "0x9Ae01EEAf38FB03554970cbDC7F83FFBB8d4Ee8A",
+    "VERIFIER_REGISTRY_ADDRESS": "0x360e9d558DEc99a2E2F81Cf925424ba399492bDc",
+    // Earlier Coston2 set (deploy block 37317124). Image and organizer reads fall back here. Comma-separated.
+    "LEGACY_LEDGER_ADDRESSES": "0xF579913c90b86f102Fff8D07c6c16f465495013C",
+    "LEGACY_REGISTRY_ADDRESSES": "0x651A078e51B69Eff17e22950573EbE0252f43E63",
+    "LEGACY_VERIFIER_REGISTRY_ADDRESSES": "0xdb6A83242139E3b7D47c31588d8d06c64CE94316",
+    // Turnstile hostname check for public comments. Not a secret. Localhost is intentionally absent.
+    "TURNSTILE_HOSTNAMES": "beingsvote.live"
+  },
+  // Off-chain public comments. database_id is a local placeholder.
+  // Replace it with the id from `npx wrangler d1 create beings-comments` before the first deploy.
+  // Do not store comments in the ballot-image bucket.
+  "d1_databases": [
+    {
+      "binding": "COMMENTS",
+      "database_name": "beings-comments",
+      "database_id": "00000000-0000-0000-0000-000000000001",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "preview_urls": false,
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 1 }
+  },
+  "r2_buckets": [
+    {
+      "binding": "BALLOT_IMAGES",
+      "bucket_name": "beings-ballot-images",
+      // Local dev and tests must use the simulated bucket, never the real (empty) one.
+      "remote": false
+    }
+  ],
+  // Same clock as the Netlify cleanup. Deletes only objects whose own deleteAfter has passed.
+  "triggers": { "crons": ["30 3 * * *"] },
+  // Secret name only. Set the value with `wrangler secret put`, never in this file.
+  "secrets": { "required": ["SCANNER_UPLOAD_TOKEN"] }
+}

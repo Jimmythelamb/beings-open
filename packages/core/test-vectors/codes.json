@@ -1,0 +1,26 @@
+{
+  "electionCode": "BEINGS-2026-K7M4Q2",
+  "electionKey": "0x97a3b6db021a2a6a6004c027252ffcabf67dd2c57b9bd84c3735284c6007b752",
+  "ballots": [
+    {
+      "ballotCode": "4F9Q7M2XHT8B",
+      "ballotKey": "0x024613ef5cc15cb497c14840be49b61aea2dfdcd0be74ecde3939d43e5321f9e"
+    },
+    {
+      "ballotCode": "B3N6D0YK5E1W",
+      "ballotKey": "0xe6c9ab945800ce2bffb72af1706d7ac3f325408e8258672fcdb1651a05e35715"
+    },
+    {
+      "ballotCode": "0123456789AB",
+      "ballotKey": "0x04d354feeedbbeeb20453642dde4a9ddacd0146cd0ca1f5529c24b53be8c9b46"
+    },
+    {
+      "ballotCode": "CDEFGHJKMNPQ",
+      "ballotKey": "0xf680b922c4adad67b275d4d2e7b64bb19d84dac83ede1e9c8dc7353469bc3bba"
+    },
+    {
+      "ballotCode": "RSTVWXYZ0123",
+      "ballotKey": "0x32d54e3ca2da6cef84c02a7e213f4eba10df92a7de12592da88a6680d52f8fa8"
+    }
+  ]
+}

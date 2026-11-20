@@ -1,0 +1,83 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "deployer": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+  "deployBlock": 37873904,
+  "sourceCommit": "f49caead7844e7ba67a0012acfa41d01a87f09ad",
+  "contracts": {
+    "BallotLedger": "0x5d00bE9A32DcF1FcDe9475C8Be874aE8af0fCf0b",
+    "ElectionRegistry": "0x9Ae01EEAf38FB03554970cbDC7F83FFBB8d4Ee8A",
+    "Tally": "0xeDaBF1D8597FC4CA0aB71fcF0E91a0be966E7892",
+    "VerifierRegistry": "0x360e9d558DEc99a2E2F81Cf925424ba399492bDc"
+  },
+  "eip712": {
+    "name": "B.E.I.N.G.S.",
+    "version": "1",
+    "chainId": 114
+  },
+  "explorer": "https://coston2-explorer.flare.network",
+  "deployTransactions": [
+    {
+      "step": "BallotLedger",
+      "txHash": "0xd8d67e873850f0cd8ed67fadc28d90575cdd382d04e5fcacad06986668aa2d62",
+      "block": 37873894,
+      "gasUsed": "2711497",
+      "effectiveGasPriceWei": "501000000000",
+      "feeC2FLR": "1.358459997",
+      "status": 1
+    },
+    {
+      "step": "ElectionRegistry",
+      "txHash": "0x11168d7bc1cc1a94704cdb78a19b640375ce9cc0b226a79fccccecca8c254d1a",
+      "block": 37873895,
+      "gasUsed": "2143362",
+      "effectiveGasPriceWei": "501000000000",
+      "feeC2FLR": "1.073824362",
+      "status": 1
+    },
+    {
+      "step": "Tally",
+      "txHash": "0x8c86f6ce166e84653cb5ebe98034d805f7c0c2fbc86e3803e145ae3b87820240",
+      "block": 37873897,
+      "gasUsed": "1830570",
+      "effectiveGasPriceWei": "502638968834",
+      "feeC2FLR": "0.92011581717845538",
+      "status": 1
+    },
+    {
+      "step": "VerifierRegistry",
+      "txHash": "0x1f421907c3152e25b17b48ead4f1c89e8366f6408b6719ba776db28a83799371",
+      "block": 37873899,
+      "gasUsed": "1453364",
+      "effectiveGasPriceWei": "501000000000",
+      "feeC2FLR": "0.728135364",
+      "status": 1
+    },
+    {
+      "step": "setLedger",
+      "txHash": "0x5394465fb92b65681ee3a191c686a5b22fe66b35fbebdc402a08b81337412192",
+      "block": 37873901,
+      "gasUsed": "45330",
+      "effectiveGasPriceWei": "501000000000",
+      "feeC2FLR": "0.02271033",
+      "status": 1
+    },
+    {
+      "step": "setTally",
+      "txHash": "0x9135f2072d151a35a3255fdfbba8d66870f014908cbcf7eac4679cb780936992",
+      "block": 37873904,
+      "gasUsed": "45367",
+      "effectiveGasPriceWei": "501000000000",
+      "feeC2FLR": "0.022728867",
+      "status": 1
+    }
+  ],
+  "totalDeployGas": 8229490,
+  "totalDeployFee": "4.12597473717845538",
+  "evmVersion": "london",
+  "solc": "0.8.24",
+  "replaces": {
+    "note": "Earlier contract set (still on chain; holds the older test elections)",
+    "see": "deployments/coston2.json"
+  }
+}

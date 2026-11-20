@@ -1,0 +1,7 @@
+{
+  "name": "@beings/tabulation",
+  "version": "0.0.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. Tabulation and live results (M5): placeholder, not yet implemented",
+  "type": "module"
+}

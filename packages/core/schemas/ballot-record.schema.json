@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/beings/ballot-record.schema.json",
+  "title": "B.E.I.N.G.S. ballot record (draft)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "electionCode",
+    "ballotCode",
+    "results",
+    "readings",
+    "review"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1"
+    },
+    "electionCode": {
+      "type": "string",
+      "pattern": "^BEINGS-[0-9]{4}-[0-9A-HJKMNP-TV-Z]{6}$"
+    },
+    "ballotCode": {
+      "type": "string",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{12}$"
+    },
+    "results": {
+      "type": "object",
+      "description": "one entry per ballot: questionId -> result V:<choiceId>[+<choiceId>...], B, O or U",
+      "propertyNames": {
+        "pattern": "^q[0-9]{1,3}$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^(V:c[0-9]{1,3}(\\+c[0-9]{1,3})*|B|O|U)$"
+      }
+    },
+    "readings": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "device",
+          "imageSha256",
+          "fillScores",
+          "results",
+          "signature"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "device": {
+            "type": "string",
+            "pattern": "^0x[0-9a-fA-F]{40}$"
+          },
+          "imageSha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "hash of the redacted image that is published"
+          },
+          "rawImageSha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "optional commitment to the sealed raw image"
+          },
+          "imageRef": {
+            "type": "string",
+            "description": "optional, non-authoritative hint of where the image is kept (a CID or web address)"
+          },
+          "fillScores": {
+            "type": "object",
+            "description": "questionId -> choiceId -> fill score 0-100",
+            "propertyNames": {
+              "pattern": "^q[0-9]{1,3}$"
+            },
+            "additionalProperties": {
+              "type": "object",
+              "propertyNames": {
+                "pattern": "^c[0-9]{1,3}$"
+              },
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          },
+          "results": {
+            "type": "object",
+            "description": "this phone's own derived results"
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^0x[0-9a-fA-F]{130}$"
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "required"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "reviewer": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]{40}$"
+        },
+        "reason": {
+          "enum": [
+            "disagreement",
+            "unclear"
+          ]
+        },
+        "signature": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]{130}$"
+        }
+      }
+    },
+    "scannedOn": {
+      "type": "string",
+      "format": "date",
+      "description": "coarse date only, per privacy.timeGranularity"
+    }
+  }
+}

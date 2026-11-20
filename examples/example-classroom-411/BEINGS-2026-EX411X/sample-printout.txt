@@ -1,0 +1,47 @@
+EXAMPLE CLASSROOM 411
+Synthetic test election. Not a real vote. Never certification-ready.
+Election code: BEINGS-2026-EX411X
+
+Sample results printout
+Built the same way the site posts a results file: one line of totals per question,
+then the ballot accounting. Choice counts are the recount of the six sample ballots.
+
+Question 1. Should we have a pizza party on Friday?
+  Valid 5   Blank 1   Overvote 0   Unclear 0
+  Yes: 3
+  No: 2
+
+Question 2. Who should be class representative?
+  Valid 5   Blank 0   Overvote 1   Unclear 0
+  Amara Okonkwo: 2
+  Ben Cho: 3
+
+Question 3. Which activities should we pick? Up to two.
+  Valid 6   Blank 0   Overvote 0   Unclear 0
+  Science museum: 3
+  Aquarium: 2
+  Park cleanup: 4
+
+Question 4. When should the class meeting be?
+  Valid 5   Blank 0   Overvote 0   Unclear 1
+  Monday: 3
+  Friday: 2
+
+Ballot accounting
+  Registered 6   Printed 6   Handed out 6
+  Counted 6   Spoiled 0   Unused returned 0   Never handed out 0
+  Balance checks failed: 0 (0 means every check passed)
+
+Three-threshold consensus (one reading, three mark rules, three Merkle roots)
+  Tight    0x4e3003c2b3550da233327a4f548caf80142353c24ee12075ce02d93a263def0e
+  Standard 0x4e3003c2b3550da233327a4f548caf80142353c24ee12075ce02d93a263def0e
+  Loose    0x4e3003c2b3550da233327a4f548caf80142353c24ee12075ce02d93a263def0e
+  The three roots match.
+
+Sample ballot codes (made up, public on purpose)
+  SAMP41100001  Clear answers. A full, readable ballot.
+  SAMP41100002  Clear answers, other choices. Another readable ballot, including one mark on a choose-two question.
+  SAMP41100003  Clear answers. A third readable ballot.
+  SAMP41100004  Blank on question 1. Question 1 has no mark. The others are filled.
+  SAMP41100005  Overvote on question 2. Question 2 allows one mark and has two. That answer is an overvote.
+  SAMP41100006  Unclear on question 4. Question 4 has a partial mark. It is unclear, not a vote.

@@ -1,0 +1,50 @@
+B.E.I.N.G.S. sanitized source snapshot for public deposit
+Commit: bd70bd78a007ce240c61da77c2ace66588d61a4c
+Subject: Merge pull request #32 from Jimmythelamb/cursor/cap-wallet-qr-62a2
+Commit date: 2026-11-19 11:39:33 -0700
+Snapshot date: 2026-11-19
+Source: git archive of that commit (origin/main). The archive was then redacted.
+Nothing from this snapshot was committed or pushed.
+
+Removed
+- notes/2026-11-04-morning-call-notes.md, and the notes/ directory. Internal call log.
+- Logo and coin artwork (brand assets, not CC BY or Apache):
+  apps/beingsvote-site/public/brand/beings-logo.mp4
+  apps/beingsvote-site/public/brand/logo-A5-t.png
+  apps/beingsvote-site/public/brand/c2flr/ (C2FLR coin)
+  apps/beingsvote-site/public/brand/flare/ (Flare coin)
+  apps/beingsvote-site/public/brand/bifrost/ (Bifrost logo)
+  Staff role icons and favicon.svg stay. They are UI marks, not the logo or coin files.
+- apps/beingsvote-site/public/data/elections/BEINGS-2026-QB1TTH.json
+  Real classroom public copy (Capilano Classroom 1209). Ballot codes were already omitted.
+  elections.json still lists the public election code and no longer points at the file.
+- packages/ballot-gen/sample/output/election-file.json
+- packages/ballot-gen/sample/output/ballot-list.json
+- packages/ballot-gen/sample/output/ballots.pdf
+  Secret ballot file, code list, and print for election BEINGS-2026-4CRWX2.
+  ballot-layout.json and manifest.json in that folder stay. They do not contain ballot codes.
+
+Redacted
+- packages/core/scripts/vectors.ts: the four TEST_KEYS hex values are the string REDACTED-TEST-VECTOR.
+- packages/core/test-vectors/eip712.json: the four privateKey values are the string REDACTED-TEST-VECTOR.
+  Derived addresses and signatures in that file are unchanged.
+- Real ballot-code strings copied into deployment receipts, packages/ledger/scripts/scanned-5.js,
+  and apps/beingsvote-site/test/staff-logic.test.ts are the string REDACTED-BALLOT-CODE.
+  Files touched:
+  packages/ledger/deployments/coston2-election200.json
+  packages/ledger/deployments/coston2-scanned-5.json
+  packages/ledger/deployments/coston2-scanned-ballot.json
+  packages/ledger/scripts/scanned-5.js
+  apps/beingsvote-site/test/staff-logic.test.ts
+  The five SAMPLE_CODES in packages/core/scripts/vectors.ts are the published synthetic vectors and stay.
+  packages/ledger/deployments/coston2-smoke.json uses one of those synthetic codes and was left as-is.
+
+Kept
+- apps/beingsvote-site/.env.example and packages/ledger/.env.example.
+  SCANNER_UPLOAD_TOKEN and DEPLOYER_PRIVATE_KEY are empty placeholders.
+  Commented public RPC and contract addresses remain.
+- No .env, node_modules, caches, PEM, or keystore files were in the tracked tree.
+- apps/beingsvote-site/public/data/elections/BEINGS-2026-WMRHGH.json is the synthetic Room 12 public copy. Codes were already omitted.
+- packages/scanner-helper/fixtures/test-print-scan/ is labelled SYNTHETIC TEST PAGE — NOT A REAL BALLOT.
+
+The redacted vector generator will not run until TEST_KEYS are restored locally. This archive is for deposit, not for deploying.

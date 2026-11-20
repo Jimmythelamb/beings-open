@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B.E.I.N.G.S. tally and reconciliation file (draft)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "electionCode",
+    "version",
+    "merkleRoot",
+    "perQuestion",
+    "reconciliation",
+    "checks",
+    "status"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1"
+    },
+    "electionCode": {
+      "type": "string",
+      "pattern": "^BEINGS-[0-9]{4}-[0-9A-HJKMNP-TV-Z]{6}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "1 = original; higher = amended after corrections"
+    },
+    "merkleRoot": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{64}$"
+    },
+    "perQuestion": {
+      "type": "object",
+      "patternProperties": {
+        "^q[0-9]{1,3}$": {
+          "type": "object",
+          "required": [
+            "valid",
+            "blank",
+            "overvote",
+            "unclear"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "valid": {
+              "$ref": "#/definitions/count"
+            },
+            "blank": {
+              "$ref": "#/definitions/count"
+            },
+            "overvote": {
+              "$ref": "#/definitions/count"
+            },
+            "unclear": {
+              "$ref": "#/definitions/count"
+            },
+            "byChoice": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/count"
+              },
+              "description": "choiceId -> number of valid marks for that choice"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "reconciliation": {
+      "type": "object",
+      "required": [
+        "registered",
+        "printed",
+        "issued",
+        "cast",
+        "spoiled",
+        "unusedReturned",
+        "unissued"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "registered": {
+          "$ref": "#/definitions/count",
+          "description": "count only; 0 = no register used"
+        },
+        "printed": {
+          "$ref": "#/definitions/count"
+        },
+        "issued": {
+          "$ref": "#/definitions/count",
+          "description": "handed out, including replacements"
+        },
+        "cast": {
+          "$ref": "#/definitions/count"
+        },
+        "spoiled": {
+          "$ref": "#/definitions/count"
+        },
+        "unusedReturned": {
+          "$ref": "#/definitions/count"
+        },
+        "unissued": {
+          "$ref": "#/definitions/count",
+          "description": "printed - issued"
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "R1_castLeIssued",
+        "R2_issuedLeRegistered",
+        "R3_issuedLePrinted",
+        "R4_issuedEqualsParts",
+        "R5_questionSums",
+        "R6_registeredMatchesFile"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "description": "true = passed"
+    },
+    "status": {
+      "enum": [
+        "final",
+        "provisional"
+      ]
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "required"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "clearedBy": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]{40}$"
+        },
+        "clearanceCid": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

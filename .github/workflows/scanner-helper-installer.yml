@@ -1,0 +1,21 @@
+name: Scanner helper installer
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  installer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install NSIS
+        run: sudo apt-get update && sudo apt-get install -y nsis unzip
+      - name: Build the setup exe
+        run: node packages/scanner-helper/tools/build-windows-installer.mjs --out /tmp/BEINGS-Scanner-Helper-Setup.exe --no-publish
+      - name: The exe is a Windows program
+        run: python3 -c "b=open('/tmp/BEINGS-Scanner-Helper-Setup.exe','rb').read(2); assert b==b'MZ', b"

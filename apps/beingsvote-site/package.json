@@ -1,0 +1,31 @@
+{
+  "name": "beingsvote-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "beingsvote.live. Ballot images are stored by the Cloudflare R2 Worker; these Netlify functions forward to it and can still read an unexpired Netlify Blob. Standalone site.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:worker": "npm test --prefix worker",
+    "typecheck:worker": "npm run typecheck --prefix worker",
+    "types:worker": "npm run types --prefix worker",
+    "dev": "netlify dev",
+    "serve": "vite-node dev/server.ts"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.7.13",
+    "@netlify/functions": "^6.0.3",
+    "@noble/hashes": "^1.8.0",
+    "ethers": "^6.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "happy-dom": "^21.0.4",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@beings/scanner-helper",
+  "version": "0.2.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. polling-PC helper: scan a ballot batch from a local or network WIA scanner (Windows), seal it under the INCIDENT-001 protocol, print ballot PDFs, run the mark reader over a sealed batch, and an optional loopback bridge. Never signs and never uploads.",
+  "type": "module",
+  "bin": {
+    "beings-batch": "./src/cli.mjs"
+  },
+  "files": ["src", "windows", "docs", "fixtures"],
+  "scripts": {
+    "test": "vitest run",
+    "batch": "node src/cli.mjs",
+    "bridge": "node src/cli.mjs bridge",
+    "bundle:windows": "node tools/build-windows-bundle.mjs",
+    "installer:windows": "node tools/build-windows-installer.mjs"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.0"
+  }
+}

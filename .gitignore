@@ -1,0 +1,37 @@
+# dependencies
+node_modules/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# build outputs
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Hardhat (packages/ledger)
+cache/
+artifacts/
+typechain-types/
+ignition/deployments/
+packages/ledger/deployments/hardhat.json
+packages/ledger/gas-report.json
+
+# logs / OS / editor
+*.log
+npm-debug.log*
+.DS_Store
+.idea/
+.vscode/
+
+# Cloudflare local state and secret files (names only belong in *.example)
+.wrangler/
+.dev.vars
+
+# generated archives
+*.zip
+# The teacher download is produced by packages/scanner-helper/tools/build-windows-bundle.mjs and published with the site.
+!apps/beingsvote-site/public/downloads/BEINGS-Scanner-Helper-Windows.zip

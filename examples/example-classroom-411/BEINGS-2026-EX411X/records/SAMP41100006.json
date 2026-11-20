@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "electionCode": "BEINGS-2026-EX411X",
+  "ballotCode": "SAMP41100006",
+  "results": {
+    "q1": "V:c1",
+    "q2": "V:c2",
+    "q3": "V:c1+c3",
+    "q4": "U"
+  },
+  "readings": [
+    {
+      "device": "0x2E99938e09Fa2D1F467a6fB90D729559A9F94fA6",
+      "imageSha256": "f5a6b08439ccd5bac5118128530f6d3feaf5caa097b86de2f23da55e03b82a3a",
+      "fillScores": {
+        "q1": {
+          "c1": 90,
+          "c2": 0
+        },
+        "q2": {
+          "c1": 0,
+          "c2": 90
+        },
+        "q3": {
+          "c1": 90,
+          "c2": 0,
+          "c3": 90
+        },
+        "q4": {
+          "c1": 0,
+          "c2": 30
+        }
+      },
+      "results": {
+        "q1": "V:c1",
+        "q2": "V:c2",
+        "q3": "V:c1+c3",
+        "q4": "U"
+      },
+      "signature": "0x39b8cafb6e44a7413e790b87c941c6405bb83b2ca866776d54102dcca540f25631dec2f357da1b1f1bc29234773e5d07a3aa96d16f5081a3396e727e3cd474b01b"
+    }
+  ],
+  "review": {
+    "required": false
+  },
+  "scannedOn": "2026-11-18"
+}

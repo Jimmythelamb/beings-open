@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B.E.I.N.G.S. ledger entry (draft)",
+  "type": "object",
+  "required": [
+    "electionCode",
+    "ballotCode",
+    "results",
+    "imageSha256",
+    "recordSha256",
+    "reviewed"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "electionCode": {
+      "type": "string",
+      "pattern": "^BEINGS-[0-9]{4}-[0-9A-HJKMNP-TV-Z]{6}$"
+    },
+    "ballotCode": {
+      "type": "string",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{12}$"
+    },
+    "results": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^q[0-9]{1,3}$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^(V:c[0-9]{1,3}(\\+c[0-9]{1,3})*|B|O|U)$"
+      }
+    },
+    "imageSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "permanent; the image itself is in the image store for the retention period"
+    },
+    "recordSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 of the canonical (JCS) full record file below"
+    },
+    "reviewed": {
+      "type": "boolean"
+    }
+  }
+}

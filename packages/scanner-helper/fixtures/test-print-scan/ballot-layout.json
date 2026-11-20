@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "0.1",
+  "layoutVersion": 3,
+  "electionCode": "BEINGS-2026-TEST00",
+  "units": "mm",
+  "origin": "centre of the top-left (TL) registration marker; x to the right, y down, in mm on the printed page",
+  "page": {
+    "size": "Letter",
+    "widthMm": 215.9,
+    "heightMm": 279.4
+  },
+  "frame": {
+    "widthMm": 187.9,
+    "heightMm": 214
+  },
+  "markers": [
+    {
+      "id": "TL",
+      "shape": "square",
+      "sizeMm": 10,
+      "center": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "TR",
+      "shape": "square",
+      "sizeMm": 8,
+      "center": {
+        "x": 187.9,
+        "y": 0
+      }
+    },
+    {
+      "id": "BL",
+      "shape": "square",
+      "sizeMm": 8,
+      "center": {
+        "x": 0,
+        "y": 214
+      }
+    },
+    {
+      "id": "BR",
+      "shape": "square",
+      "sizeMm": 8,
+      "center": {
+        "x": 187.9,
+        "y": 214
+      }
+    }
+  ],
+  "oval": {
+    "shape": "ellipse",
+    "widthMm": 6,
+    "heightMm": 4.5,
+    "outline": "light grey drop-out colour",
+    "sampleScale": 0.8,
+    "baselineRingScale": [
+      1.25,
+      1.6
+    ]
+  },
+  "qr": {
+    "payloadFormat": "BEINGS1|<electionCode>|<ballotCode>|L<layoutVersion>",
+    "errorCorrection": "M",
+    "moduleMm": 0.8,
+    "quietZoneModules": 4,
+    "modules": 29,
+    "bbox": {
+      "x": 146,
+      "y": 22,
+      "width": 23.2,
+      "height": 23.2
+    }
+  },
+  "ballotCodeText": {
+    "bbox": {
+      "x": 10,
+      "y": 28.8,
+      "width": 59.267,
+      "height": 8.2
+    },
+    "format": "groups of four joined by '-', for example 4F9Q-7M2X-HT8B (the QR payload holds the code without dashes)"
+  },
+  "tearLineY": 227,
+  "receiptStub": {
+    "x": 10,
+    "y": 229,
+    "width": 166,
+    "height": 28
+  },
+  "examplesPanel": {
+    "x": 10,
+    "y": 72,
+    "width": 166,
+    "height": 14
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "maxMarks": 1,
+      "headingBox": {
+        "x": 10,
+        "y": 90,
+        "width": 166,
+        "height": 6
+      },
+      "idBox": {
+        "x": 10,
+        "y": 91.619,
+        "width": 4.235,
+        "height": 3.016
+      },
+      "ovals": [
+        {
+          "choiceId": "c1",
+          "idBox": {
+            "x": 24,
+            "y": 99.606,
+            "width": 2.421,
+            "height": 2.178
+          },
+          "center": {
+            "x": 18,
+            "y": 100.5
+          },
+          "uv": {
+            "x": 0.096,
+            "y": 0.47
+          },
+          "widthMm": 6,
+          "heightMm": 4.5
+        },
+        {
+          "choiceId": "c2",
+          "idBox": {
+            "x": 24,
+            "y": 108.606,
+            "width": 2.421,
+            "height": 2.178
+          },
+          "center": {
+            "x": 18,
+            "y": 109.5
+          },
+          "uv": {
+            "x": 0.096,
+            "y": 0.512
+          },
+          "widthMm": 6,
+          "heightMm": 4.5
+        }
+      ]
+    }
+  ],
+  "redaction": {
+    "keep": [
+      "questions[].ovals",
+      "questions[].ovals[].idBox",
+      "questions[].idBox",
+      "qr.bbox",
+      "ballotCodeText.bbox"
+    ],
+    "note": "Everything outside these regions may be blurred or cropped before an image is published (spec 3.2). The receipt below tearLineY is torn off before the ballot is cast and scanning; examplesPanel is printed text, not a mark to be read."
+  }
+}

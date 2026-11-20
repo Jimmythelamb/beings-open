@@ -1,0 +1,57 @@
+{
+  "electionCode": "BEINGS-2026-EX411X",
+  "name": "Example Classroom 411",
+  "kind": "test",
+  "label": "Example · Test",
+  "summary": "A finished synthetic classroom election. The ballots, names and codes are made up. A Test election is never certification-ready.",
+  "ballots": [
+    {
+      "ballotCode": "SAMP41100001",
+      "label": "Clear answers",
+      "note": "A full, readable ballot.",
+      "imageSha256": "5e3c317aa0459ee70891506aadbbd7c862025ee3bdb82d0d2956dccba9010f0f",
+      "imageBytes": 121916,
+      "contentType": "image/png"
+    },
+    {
+      "ballotCode": "SAMP41100002",
+      "label": "Clear answers, other choices",
+      "note": "Another readable ballot, including one mark on a choose-two question.",
+      "imageSha256": "51d30e3f65401d4a361202f20e22113db6a5bae7cd89bc7f6d7131328b25121a",
+      "imageBytes": 122067,
+      "contentType": "image/png"
+    },
+    {
+      "ballotCode": "SAMP41100003",
+      "label": "Clear answers",
+      "note": "A third readable ballot.",
+      "imageSha256": "adac039af54ecc0cae3b3de7591d85480d8f430af48ff5772c85fc32dee136cb",
+      "imageBytes": 122407,
+      "contentType": "image/png"
+    },
+    {
+      "ballotCode": "SAMP41100004",
+      "label": "Blank on question 1",
+      "note": "Question 1 has no mark. The others are filled.",
+      "imageSha256": "fff648ec2bd35f00cb705f426a5038f123ed5491c4a5f30385140cad24b598a0",
+      "imageBytes": 121769,
+      "contentType": "image/png"
+    },
+    {
+      "ballotCode": "SAMP41100005",
+      "label": "Overvote on question 2",
+      "note": "Question 2 allows one mark and has two. That answer is an overvote.",
+      "imageSha256": "bf65c80fbcf65cd0176b8aa9f02ea4aac5dbc097a7e578e3640ec9b5b3364ef5",
+      "imageBytes": 122360,
+      "contentType": "image/png"
+    },
+    {
+      "ballotCode": "SAMP41100006",
+      "label": "Unclear on question 4",
+      "note": "Question 4 has a partial mark. It is unclear, not a vote.",
+      "imageSha256": "f5a6b08439ccd5bac5118128530f6d3feaf5caa097b86de2f23da55e03b82a3a",
+      "imageBytes": 122537,
+      "contentType": "image/png"
+    }
+  ]
+}

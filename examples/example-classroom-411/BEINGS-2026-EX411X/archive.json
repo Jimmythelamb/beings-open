@@ -1,0 +1,23 @@
+{
+  "layout": "beings-election-archive/1",
+  "electionCode": "BEINGS-2026-EX411X",
+  "about": "One folder per election. This copy is the public example. A later real election can use the same names for the public file, questions, fingerprints and receipts. Ballot images stay here only when that election publishes them. Answers can be rebuilt from the chain: each counted ballot is a results string under its ballot key, and these fingerprints tie the files to that ledger.",
+  "files": {
+    "election-file.json": "Full election file, including synthetic ballot codes. Real elections omit the codes from the public copy.",
+    "ballot-layout.json": "Oval positions the scanner uses. Covered by layoutHash inside the election file.",
+    "ballot-list.json": "Codes, keys and the ballot-list Merkle root.",
+    "ballots.pdf": "Blank print master from the ballot generator, with a sample watermark.",
+    "marked-ballots.pdf": "The same pages with the sample marks drawn in. The PNG scans are rasterized from this file.",
+    "images/": "One PNG per ballot, named by its SHA-256. The site shows these files directly. The R2 worker is not used.",
+    "records/": "One ballot record per code, including the reading signature and fill scores.",
+    "results.json": "The results document the tally transaction fingerprints.",
+    "sample-printout.txt": "The same totals in the plain printout the results page describes.",
+    "consensus.json": "The three-threshold consensus report and its three Merkle roots.",
+    "fingerprints.json": "Every hash the pages and the chain script check.",
+    "roster-public.json": "Public Test roster. The administrator covers the other lines. Names of students are not used.",
+    "chain-plan.json": "The exact arguments the chain script sends. No private key.",
+    "verifier-report.json": "The report the script posts after the tally.",
+    "receipts.json": "Transaction receipts. Empty until the chain script runs.",
+    "index.json": "Short index the website reads for sample codes and image names."
+  }
+}

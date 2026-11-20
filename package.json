@@ -1,0 +1,21 @@
+{
+  "name": "beings-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. (Blockchain Election Integrity Network System) starter monorepo",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build -w @beings/core && npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run build -w @beings/core && npm run typecheck --workspaces --if-present",
+    "test:core": "npm run test -w @beings/core",
+    "test:ballot-gen": "npm run test -w @beings/ballot-gen",
+    "ballots:sample": "npm run sample -w @beings/ballot-gen"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "utf8": "",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "keccak256": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+  },
+  {
+    "utf8": "abc",
+    "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "keccak256": "0x4e03657aea45a94fc7d47ba826c8d667c0d1e6e33a64a036ec44f58fa12d6c45"
+  },
+  {
+    "utf8": "B.E.I.N.G.S.",
+    "sha256": "a95a6d1b1db3839c03e4211cf2ffb5c19d835e60b2ff287b6ac1547cbf7de625",
+    "keccak256": "0xa8a1e59bc9980b8bc4e15572c92971cbd8e3ef69bbbe4d6799f67a5fe730cb35"
+  },
+  {
+    "utf8": "é€😀",
+    "sha256": "df9226927fd572c1ee66eec85de1bb139497614899f36e4e90474cb71f6ef9d0",
+    "keccak256": "0x554e5ce18b0370efb133d26247e47fb42fef9612d1821b3227fc073d0a49f385"
+  }
+]

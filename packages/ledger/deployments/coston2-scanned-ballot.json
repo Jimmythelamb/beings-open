@@ -1,0 +1,140 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "electionCode": "BEINGS-2026-4CRWX2",
+  "electionKey": "0x295b9ab082f3aa26f44be188a6875800eba91602309fa46d0526247af6233aaf",
+  "ballotCode": "REDACTED-BALLOT-CODE",
+  "ballotKey": "0xa40dd90fb49628b47c5ddc5f5eeb259ff83bf081e02e82609f266e2d7dd2677a",
+  "contracts": {
+    "BallotLedger": "0xF579913c90b86f102Fff8D07c6c16f465495013C",
+    "ElectionRegistry": "0x651A078e51B69Eff17e22950573EbE0252f43E63",
+    "Tally": "0x9844040a1B4BEC18a384d68F29cE2bd5D24cB4f4"
+  },
+  "deviceAddress": "0x965cc274E402b1c60b1b1363525C36B745d0b5EB",
+  "electionFileSha256": "0x9b0f9112185049060b61021f9643d3cb7080dbfcf2ebb3924db390a65bc14b18",
+  "ballotListRoot": "0x37937d0d0afac03a1a2107d704ceeda2b2dbc4d2d60971409170e8500c724105",
+  "layoutHash": "6eb381631b0ec58595ff1d21cce1e1cc612d13cb99cd0ad83b45489f1ff115e2",
+  "resultsString": "V:c1|V:c3|V:c3+c4",
+  "imageSha256": "0x20a7c8c5bc3596e59d57e4504486fd75e1a29b64bb9bc8c4bc6f4545ad77e6a6",
+  "recordSha256": "0xb39c8e5433ee2b4733466429d2ed6bb45bc9cf63649a8e8c6efaa15f161fabc4",
+  "steps": [
+    {
+      "step": "ElectionRegistry.createElection",
+      "txHash": "0x0ec9c6058bfe38f13806c9ef816ba0b20437a4becfd2059f495713ca1d49308b",
+      "block": 37318946,
+      "gasUsed": 240511,
+      "gasPriceWei": "650000000000",
+      "feeWei": "156332150000000000",
+      "fee": "0.15633215",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x0ec9c6058bfe38f13806c9ef816ba0b20437a4becfd2059f495713ca1d49308b"
+    },
+    {
+      "step": "ElectionRegistry.registerDevice",
+      "txHash": "0xe3bdf48ff0972c0b8477cd9449351e6f1a2f07721591fba24cdfeda870cc7eda",
+      "block": 37318948,
+      "gasUsed": 72506,
+      "gasPriceWei": "650000000000",
+      "feeWei": "47128900000000000",
+      "fee": "0.0471289",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0xe3bdf48ff0972c0b8477cd9449351e6f1a2f07721591fba24cdfeda870cc7eda"
+    },
+    {
+      "step": "ElectionRegistry.openElection",
+      "txHash": "0x5930e9cf2cc082ba156b16e78c75b155125f57fff747785a0e25e6f852311f5c",
+      "block": 37318949,
+      "gasUsed": 34094,
+      "gasPriceWei": "650000000000",
+      "feeWei": "22161100000000000",
+      "fee": "0.0221611",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x5930e9cf2cc082ba156b16e78c75b155125f57fff747785a0e25e6f852311f5c"
+    },
+    {
+      "step": "BallotLedger.submitRecord (1 reading)",
+      "txHash": "0x986092e65818626792fc754f2b7a7126fd7a2412fbd9664b7a10c76af9087fc4",
+      "block": 37318952,
+      "gasUsed": 167295,
+      "gasPriceWei": "650000000000",
+      "feeWei": "108741750000000000",
+      "fee": "0.10874175",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x986092e65818626792fc754f2b7a7126fd7a2412fbd9664b7a10c76af9087fc4"
+    },
+    {
+      "step": "ElectionRegistry.closeElection",
+      "txHash": "0x2b22710d92f7fd7137934110018ea413fd65a825682028d0616f94feae960a77",
+      "block": 37318955,
+      "gasUsed": 29390,
+      "gasPriceWei": "650000000000",
+      "feeWei": "19103500000000000",
+      "fee": "0.0191035",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x2b22710d92f7fd7137934110018ea413fd65a825682028d0616f94feae960a77"
+    },
+    {
+      "step": "Tally.postTally (3 questions)",
+      "txHash": "0xf213ff543e64a980f47a2df1df5780fdbddaef7c78ae0b8449193d862878e246",
+      "block": 37318956,
+      "gasUsed": 357037,
+      "gasPriceWei": "650000000000",
+      "feeWei": "232074050000000000",
+      "fee": "0.23207405",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0xf213ff543e64a980f47a2df1df5780fdbddaef7c78ae0b8449193d862878e246"
+    }
+  ],
+  "totalGas": 900833,
+  "totalFee": "0.58554145",
+  "registryStatus": 4,
+  "onChain": {
+    "results": "V:c1|V:c3|V:c3+c4",
+    "resultsHash": "0xcd68df54eea94d55e36e4c62e247fba668e0dcc341e348c16905d395c95139c3",
+    "imageSha256": "0x20a7c8c5bc3596e59d57e4504486fd75e1a29b64bb9bc8c4bc6f4545ad77e6a6",
+    "recordSha256": "0xb39c8e5433ee2b4733466429d2ed6bb45bc9cf63649a8e8c6efaa15f161fabc4",
+    "acceptedAt": 1793523944,
+    "acceptedAtIso": "2026-11-01T09:05:44.000Z",
+    "reviewed": false
+  },
+  "checks": {
+    "resultsMatchScan": true,
+    "resultsHashMatches": true,
+    "imageHashMatches": true,
+    "recordHashMatches": true,
+    "leafFromChainMatches": true,
+    "recordCount": 1,
+    "tallyFailedChecks": 0,
+    "tallyIsFinal": true,
+    "inclusionProofOk": true
+  },
+  "tally": {
+    "merkleRoot": "0xe3c7d413dd51f55472a0783cc8117294939512812f21c13996b1b1438f70288b",
+    "perQuestion": [
+      {
+        "valid": 1,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0
+      },
+      {
+        "valid": 1,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0
+      },
+      {
+        "valid": 1,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0
+      }
+    ],
+    "registered": 30,
+    "issued": 1,
+    "unusedReturned": 0,
+    "reconcileFailedChecks": 0
+  },
+  "balanceBefore": "78.50031725",
+  "balanceAfter": "77.9147758"
+}

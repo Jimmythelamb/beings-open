@@ -1,0 +1,643 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "electionCode": "BEINGS-2026-WMRHGH",
+  "electionKey": "0x37fd0bcc4755daa69d7d4f3f78cd015c7e59ed3947d9bd1a896c62a1f86d282b",
+  "derivedFromElection": "BEINGS-2026-4CRWX2",
+  "contracts": {
+    "ledger": "0xF579913c90b86f102Fff8D07c6c16f465495013C",
+    "registry": "0x651A078e51B69Eff17e22950573EbE0252f43E63",
+    "tally": "0x9844040a1B4BEC18a384d68F29cE2bd5D24cB4f4"
+  },
+  "deployer": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+  "deviceAddress": "0x7f5F788D89e99Aff09663A60d1f7E4aa4Bd34656",
+  "electionFile": {
+    "schemaVersion": "0.1",
+    "version": 1,
+    "name": "Room 12 Class Election",
+    "organizerPublicKey": "0x1111111111111111111111111111111111111111",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Should we have a class pizza party on Friday?",
+        "maxMarks": 1,
+        "choices": [
+          {
+            "id": "c1",
+            "text": "Yes"
+          },
+          {
+            "id": "c2",
+            "text": "No"
+          }
+        ]
+      },
+      {
+        "id": "q2",
+        "text": "Who should be class president?",
+        "maxMarks": 1,
+        "choices": [
+          {
+            "id": "c1",
+            "text": "Amara Okafor"
+          },
+          {
+            "id": "c2",
+            "text": "Ben Tremblay"
+          },
+          {
+            "id": "c3",
+            "text": "Chloe Nguyen"
+          },
+          {
+            "id": "c4",
+            "text": "Dmitri Ivanov"
+          }
+        ]
+      },
+      {
+        "id": "q3",
+        "text": "Which two field trips should we take? (choose up to two)",
+        "maxMarks": 2,
+        "choices": [
+          {
+            "id": "c1",
+            "text": "Science museum"
+          },
+          {
+            "id": "c2",
+            "text": "Aquarium"
+          },
+          {
+            "id": "c3",
+            "text": "Zoo"
+          },
+          {
+            "id": "c4",
+            "text": "Fire station"
+          },
+          {
+            "id": "c5",
+            "text": "Botanical garden"
+          }
+        ]
+      }
+    ],
+    "resultRules": {
+      "emptyBelow": 15,
+      "markedAbove": 50,
+      "results": [
+        "V",
+        "B",
+        "O",
+        "U"
+      ],
+      "abstainButton": false
+    },
+    "privacy": {
+      "redactImages": true,
+      "publishOrder": "sorted",
+      "timeGranularity": "event",
+      "minBreakdownSize": 10
+    },
+    "registeredVoters": 5,
+    "approvedAppHashes": [
+      "9f2c1a7b4d8e3f605a1b2c3d4e5f60718293a4b5c6d7e8f9012345678901abcd"
+    ],
+    "quorum": 1,
+    "opensAt": "2026-11-09T16:00:00Z",
+    "closesAt": "2026-11-09T22:00:00Z",
+    "electionCode": "BEINGS-2026-WMRHGH",
+    "ballotCodes": [
+      "REDACTED-BALLOT-CODE",
+      "REDACTED-BALLOT-CODE",
+      "REDACTED-BALLOT-CODE",
+      "REDACTED-BALLOT-CODE",
+      "REDACTED-BALLOT-CODE"
+    ],
+    "layoutHash": "6eb381631b0ec58595ff1d21cce1e1cc612d13cb99cd0ad83b45489f1ff115e2"
+  },
+  "electionFileSha256": "0x844d1bed9b7d8a2afa74564aaf501e4aae66f016717bec92cbbef82cb8b4f4b9",
+  "layoutHash": "6eb381631b0ec58595ff1d21cce1e1cc612d13cb99cd0ad83b45489f1ff115e2",
+  "ballotList": {
+    "schemaVersion": "0.1",
+    "electionCode": "BEINGS-2026-WMRHGH",
+    "electionKey": "0x37fd0bcc4755daa69d7d4f3f78cd015c7e59ed3947d9bd1a896c62a1f86d282b",
+    "count": 5,
+    "ballotListRoot": "0x68b97e290ac380c9218f8147cacef165e417f789c017681e8cc0ea047b49941c",
+    "ballots": [
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0xa40dd90fb49628b47c5ddc5f5eeb259ff83bf081e02e82609f266e2d7dd2677a"
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0xe591770206f5ae9b22698646f290f8a0ad0252e8a437dbd8c6ebc252ee46aa0a"
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0x8ee38f3be9bb17346ef2dea521bb81f1ba7432171c6ca0240f4c0915a0d9da49"
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0x28dfd1db8ff51143e4ae0c1ae4cc946f3e80cce5a43c6f78be43be2f93261d85"
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0xca70f3f6fbf4cb4abff656310390f6e408a69c2ddf74721eee9a9939d09df30e"
+      }
+    ]
+  },
+  "ballots": [
+    {
+      "page": 1,
+      "ballotCode": "REDACTED-BALLOT-CODE",
+      "ballotKey": "0xa40dd90fb49628b47c5ddc5f5eeb259ff83bf081e02e82609f266e2d7dd2677a",
+      "resultsString": "V:c1|V:c3|V:c3+c4",
+      "resultsHash": "0xcd68df54eea94d55e36e4c62e247fba668e0dcc341e348c16905d395c95139c3",
+      "fillScores": {
+        "q1": {
+          "c1": 100,
+          "c2": 4
+        },
+        "q2": {
+          "c1": 2,
+          "c2": 2,
+          "c3": 98,
+          "c4": 0
+        },
+        "q3": {
+          "c1": 0,
+          "c2": 0,
+          "c3": 100,
+          "c4": 99,
+          "c5": 0
+        }
+      },
+      "imageFile": "/workspace/scans/native-000.jpg",
+      "imageSha256": "0x20a7c8c5bc3596e59d57e4504486fd75e1a29b64bb9bc8c4bc6f4545ad77e6a6",
+      "recordSha256": "0xab94b9ed487b34a36863ccc9370d4d1ed51fbf94f56a7debdc236ae70ef1b509",
+      "leaf": "0x85e9692f7959e40fb92986beec3e4de656b52563522cefa13ad32c43930f3a1f"
+    },
+    {
+      "page": 2,
+      "ballotCode": "REDACTED-BALLOT-CODE",
+      "ballotKey": "0xe591770206f5ae9b22698646f290f8a0ad0252e8a437dbd8c6ebc252ee46aa0a",
+      "resultsString": "V:c1|O|V:c2+c4",
+      "resultsHash": "0x314fb660abb95d15e231c45cb2ef3e7781be49c13876e36b62fa9c7aa8701e00",
+      "fillScores": {
+        "q1": {
+          "c1": 99,
+          "c2": 3
+        },
+        "q2": {
+          "c1": 2,
+          "c2": 99,
+          "c3": 99,
+          "c4": 1
+        },
+        "q3": {
+          "c1": 0,
+          "c2": 96,
+          "c3": 0,
+          "c4": 100,
+          "c5": 0
+        }
+      },
+      "imageFile": "/workspace/scans/native-001.jpg",
+      "imageSha256": "0x480363ded134a60d0f4b8b40aa005ca8dcc47cc1acbf2fcf8e4d28cbabcf14b3",
+      "recordSha256": "0xd5c260ccc6a22734ec1c3d4f64580ac2a728145a612c7236b0b16e1540008712",
+      "leaf": "0x599aa65b8637e5763e9358c17d70fe7c424fba2fc53ca422d3b7dc1804cbca0b"
+    },
+    {
+      "page": 3,
+      "ballotCode": "REDACTED-BALLOT-CODE",
+      "ballotKey": "0x8ee38f3be9bb17346ef2dea521bb81f1ba7432171c6ca0240f4c0915a0d9da49",
+      "resultsString": "V:c1|V:c2|V:c3+c4",
+      "resultsHash": "0x16b1a03cdc7daa9ba347d921f82a7c4c47cc3f71fdaa5bbce152fe9e5225739c",
+      "fillScores": {
+        "q1": {
+          "c1": 100,
+          "c2": 0
+        },
+        "q2": {
+          "c1": 0,
+          "c2": 95,
+          "c3": 0,
+          "c4": 0
+        },
+        "q3": {
+          "c1": 0,
+          "c2": 0,
+          "c3": 98,
+          "c4": 92,
+          "c5": 0
+        }
+      },
+      "imageFile": "/workspace/scans/native-002.jpg",
+      "imageSha256": "0x289732e45fe7cfdd0ef115b29a074ff6898d2b67f6f9b52b0abb9f12f0e86b87",
+      "recordSha256": "0x782527ceeb72fac2fc9db74deb38b24b8efdc01adeab0703949ad282284ed181",
+      "leaf": "0xbe5d5c74dba048a3b575db92a907a98ef9877464bd2c723527c4d8d8fe548db3"
+    },
+    {
+      "page": 4,
+      "ballotCode": "REDACTED-BALLOT-CODE",
+      "ballotKey": "0x28dfd1db8ff51143e4ae0c1ae4cc946f3e80cce5a43c6f78be43be2f93261d85",
+      "resultsString": "V:c1|V:c2|V:c3+c4",
+      "resultsHash": "0x16b1a03cdc7daa9ba347d921f82a7c4c47cc3f71fdaa5bbce152fe9e5225739c",
+      "fillScores": {
+        "q1": {
+          "c1": 100,
+          "c2": 0
+        },
+        "q2": {
+          "c1": 0,
+          "c2": 91,
+          "c3": 0,
+          "c4": 0
+        },
+        "q3": {
+          "c1": 0,
+          "c2": 0,
+          "c3": 99,
+          "c4": 100,
+          "c5": 0
+        }
+      },
+      "imageFile": "/workspace/scans/native-003.jpg",
+      "imageSha256": "0x709e8f92b473f6b646162b93ad2b44e64e0e7ed0112b7b6ab9df5d46eb0e132e",
+      "recordSha256": "0xab219f8436d37fad1469641e413f1faf2b4d0943e730bb7a1f7f957927e0ff04",
+      "leaf": "0x333fcd5ea8f14fa5db3ddd37acdd2b934c68ac9732996ff7acf8735703880d0c"
+    },
+    {
+      "page": 5,
+      "ballotCode": "REDACTED-BALLOT-CODE",
+      "ballotKey": "0xca70f3f6fbf4cb4abff656310390f6e408a69c2ddf74721eee9a9939d09df30e",
+      "resultsString": "V:c1|V:c4|V:c1+c3",
+      "resultsHash": "0x9aa4b6517e16a2d2d43611263aa52a05fffbf8672fb94165d401f0e28da53f9a",
+      "fillScores": {
+        "q1": {
+          "c1": 100,
+          "c2": 0
+        },
+        "q2": {
+          "c1": 0,
+          "c2": 0,
+          "c3": 0,
+          "c4": 83
+        },
+        "q3": {
+          "c1": 99,
+          "c2": 0,
+          "c3": 100,
+          "c4": 0,
+          "c5": 0
+        }
+      },
+      "imageFile": "/workspace/scans/native-004.jpg",
+      "imageSha256": "0x8bdcc7d434a612126f2919ec3aa0ac835ec72c9468bd2fe4e6ce6c3350cd7f8b",
+      "recordSha256": "0x2ed9f9f4e3879acf9ae58b313eeab4de77958939ad89e270377b0f9d2ec31260",
+      "leaf": "0x9e543c521aa3690c24cecb8ab11c36b5de99388fbf54cc7e884336b76b0346be"
+    }
+  ],
+  "tally": {
+    "perQuestion": {
+      "q1": {
+        "valid": 5,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0,
+        "byChoice": {
+          "c1": 5,
+          "c2": 0
+        }
+      },
+      "q2": {
+        "valid": 4,
+        "blank": 0,
+        "overvote": 1,
+        "unclear": 0,
+        "byChoice": {
+          "c1": 0,
+          "c2": 2,
+          "c3": 1,
+          "c4": 1
+        }
+      },
+      "q3": {
+        "valid": 5,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0,
+        "byChoice": {
+          "c1": 1,
+          "c2": 1,
+          "c3": 4,
+          "c4": 4,
+          "c5": 0
+        }
+      }
+    },
+    "merkleRoot": "0x7909be40af23fae7184afb73b590bb848947a36441576b8a672332c22a201420",
+    "registered": 5,
+    "issued": 5,
+    "unusedReturned": 0,
+    "reconcileFailedChecks": 0
+  },
+  "steps": [
+    {
+      "step": "ElectionRegistry.createElection",
+      "txHash": "0x30142e82d78165a2b0556fe5c6839910fb7292e54338e15fe4bcc8fe83d10b00",
+      "block": 37319171,
+      "gasUsed": 241161,
+      "gasPriceWei": "650000000000",
+      "feeWei": "156754650000000000",
+      "fee": "0.15675465",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x30142e82d78165a2b0556fe5c6839910fb7292e54338e15fe4bcc8fe83d10b00"
+    },
+    {
+      "step": "ElectionRegistry.registerDevice",
+      "txHash": "0x047d970d5462feb097de6715b267958260c7f05cb14deb88969e868c21efb6bd",
+      "block": 37319173,
+      "gasUsed": 72518,
+      "gasPriceWei": "650000000000",
+      "feeWei": "47136700000000000",
+      "fee": "0.0471367",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x047d970d5462feb097de6715b267958260c7f05cb14deb88969e868c21efb6bd"
+    },
+    {
+      "step": "ElectionRegistry.openElection",
+      "txHash": "0xeee168706b3ebc1ff69d695118e2983f40e01d41b0939e5a9c25768abbfb8269",
+      "block": 37319175,
+      "gasUsed": 34106,
+      "gasPriceWei": "650000000000",
+      "feeWei": "22168900000000000",
+      "fee": "0.0221689",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0xeee168706b3ebc1ff69d695118e2983f40e01d41b0939e5a9c25768abbfb8269"
+    },
+    {
+      "step": "BallotLedger.submitBatch (5 records, pages 1-5)",
+      "txHash": "0x0b2b67c61bb91fe31fa8ad57d2091ff92d14b7d30a8d3e80380c1260ce4905f1",
+      "block": 37319176,
+      "gasUsed": 622591,
+      "gasPriceWei": "650000000000",
+      "feeWei": "404684150000000000",
+      "fee": "0.40468415",
+      "status": 1,
+      "records": 5,
+      "ballotCodes": [
+        "REDACTED-BALLOT-CODE",
+        "REDACTED-BALLOT-CODE",
+        "REDACTED-BALLOT-CODE",
+        "REDACTED-BALLOT-CODE",
+        "REDACTED-BALLOT-CODE"
+      ],
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0x0b2b67c61bb91fe31fa8ad57d2091ff92d14b7d30a8d3e80380c1260ce4905f1"
+    },
+    {
+      "step": "ElectionRegistry.closeElection",
+      "txHash": "0xe216e003f8d1ce72e64aebd66ddf390551c7925e41af43bbd8328d3fe5b141f9",
+      "block": 37319178,
+      "gasUsed": 29402,
+      "gasPriceWei": "650000000000",
+      "feeWei": "19111300000000000",
+      "fee": "0.0191113",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0xe216e003f8d1ce72e64aebd66ddf390551c7925e41af43bbd8328d3fe5b141f9"
+    },
+    {
+      "step": "Tally.postTally (3 questions)",
+      "txHash": "0xfd03b15ea6add46499adb1c62f1eb653b4d7817d762d3e134fc767852b230b4b",
+      "block": 37319180,
+      "gasUsed": 356980,
+      "gasPriceWei": "650000000000",
+      "feeWei": "232037000000000000",
+      "fee": "0.232037",
+      "status": 1,
+      "explorerUrl": "https://coston2-explorer.flare.network/tx/0xfd03b15ea6add46499adb1c62f1eb653b4d7817d762d3e134fc767852b230b4b"
+    }
+  ],
+  "totals": {
+    "transactions": 6,
+    "gas": 1356758,
+    "feeC2FLR": "0.8818927",
+    "feeWei": "881892700000000000"
+  },
+  "verification": {
+    "recordsOnChain": 5,
+    "spoiledOnChain": 0,
+    "correctionsOnChain": 0,
+    "resultCount": 1,
+    "electionOnChain": {
+      "organizer": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+      "status": 4,
+      "statusName": "Tallied",
+      "ballotCount": 5,
+      "registeredVoters": 5,
+      "quorum": 1,
+      "ballotListRoot": "0x68b97e290ac380c9218f8147cacef165e417f789c017681e8cc0ea047b49941c",
+      "fileSha256": "0x844d1bed9b7d8a2afa74564aaf501e4aae66f016717bec92cbbef82cb8b4f4b9",
+      "deviceRegistered": true
+    },
+    "electionFileShaMatches": true,
+    "ballotListRootMatches": true,
+    "perBallot": [
+      {
+        "page": 1,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0xa40dd90fb49628b47c5ddc5f5eeb259ff83bf081e02e82609f266e2d7dd2677a",
+        "onChainResults": "V:c1|V:c3|V:c3+c4",
+        "expectedResults": "V:c1|V:c3|V:c3+c4",
+        "resultsMatch": true,
+        "resultsHashMatch": true,
+        "imageHashMatch": true,
+        "recordHashMatch": true,
+        "acceptedAt": 1793524416,
+        "acceptedAtIso": "2026-11-01T09:13:36.000Z",
+        "reviewed": false,
+        "spoiled": false,
+        "onBallotList": true
+      },
+      {
+        "page": 2,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0xe591770206f5ae9b22698646f290f8a0ad0252e8a437dbd8c6ebc252ee46aa0a",
+        "onChainResults": "V:c1|O|V:c2+c4",
+        "expectedResults": "V:c1|O|V:c2+c4",
+        "resultsMatch": true,
+        "resultsHashMatch": true,
+        "imageHashMatch": true,
+        "recordHashMatch": true,
+        "acceptedAt": 1793524416,
+        "acceptedAtIso": "2026-11-01T09:13:36.000Z",
+        "reviewed": false,
+        "spoiled": false,
+        "onBallotList": true
+      },
+      {
+        "page": 3,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0x8ee38f3be9bb17346ef2dea521bb81f1ba7432171c6ca0240f4c0915a0d9da49",
+        "onChainResults": "V:c1|V:c2|V:c3+c4",
+        "expectedResults": "V:c1|V:c2|V:c3+c4",
+        "resultsMatch": true,
+        "resultsHashMatch": true,
+        "imageHashMatch": true,
+        "recordHashMatch": true,
+        "acceptedAt": 1793524416,
+        "acceptedAtIso": "2026-11-01T09:13:36.000Z",
+        "reviewed": false,
+        "spoiled": false,
+        "onBallotList": true
+      },
+      {
+        "page": 4,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0x28dfd1db8ff51143e4ae0c1ae4cc946f3e80cce5a43c6f78be43be2f93261d85",
+        "onChainResults": "V:c1|V:c2|V:c3+c4",
+        "expectedResults": "V:c1|V:c2|V:c3+c4",
+        "resultsMatch": true,
+        "resultsHashMatch": true,
+        "imageHashMatch": true,
+        "recordHashMatch": true,
+        "acceptedAt": 1793524416,
+        "acceptedAtIso": "2026-11-01T09:13:36.000Z",
+        "reviewed": false,
+        "spoiled": false,
+        "onBallotList": true
+      },
+      {
+        "page": 5,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "ballotKey": "0xca70f3f6fbf4cb4abff656310390f6e408a69c2ddf74721eee9a9939d09df30e",
+        "onChainResults": "V:c1|V:c4|V:c1+c3",
+        "expectedResults": "V:c1|V:c4|V:c1+c3",
+        "resultsMatch": true,
+        "resultsHashMatch": true,
+        "imageHashMatch": true,
+        "recordHashMatch": true,
+        "acceptedAt": 1793524416,
+        "acceptedAtIso": "2026-11-01T09:13:36.000Z",
+        "reviewed": false,
+        "spoiled": false,
+        "onBallotList": true
+      }
+    ],
+    "allBallotsMatch": true,
+    "tallyFromChainRecords": {
+      "q1": {
+        "valid": 5,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0,
+        "byChoice": {
+          "c1": 5,
+          "c2": 0
+        }
+      },
+      "q2": {
+        "valid": 4,
+        "blank": 0,
+        "overvote": 1,
+        "unclear": 0,
+        "byChoice": {
+          "c1": 0,
+          "c2": 2,
+          "c3": 1,
+          "c4": 1
+        }
+      },
+      "q3": {
+        "valid": 5,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0,
+        "byChoice": {
+          "c1": 1,
+          "c2": 1,
+          "c3": 4,
+          "c4": 4,
+          "c5": 0
+        }
+      }
+    },
+    "storedTally": [
+      {
+        "valid": 5,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0
+      },
+      {
+        "valid": 4,
+        "blank": 0,
+        "overvote": 1,
+        "unclear": 0
+      },
+      {
+        "valid": 5,
+        "blank": 0,
+        "overvote": 0,
+        "unclear": 0
+      }
+    ],
+    "tallyRecomputedMatchesStored": true,
+    "tallyRecomputedMatchesOrganizer": true,
+    "merkleRootRecomputed": "0x7909be40af23fae7184afb73b590bb848947a36441576b8a672332c22a201420",
+    "merkleRootStored": "0x7909be40af23fae7184afb73b590bb848947a36441576b8a672332c22a201420",
+    "merkleRootMatches": true,
+    "reconciliationRecomputedFailedChecks": 0,
+    "reconciliationStoredFailedChecks": 0,
+    "reconciliationMatches": true,
+    "storedRecon": {
+      "registered": 5,
+      "printed": 5,
+      "issued": 5,
+      "cast": 5,
+      "spoiled": 0,
+      "unusedReturned": 0,
+      "unissued": 0
+    },
+    "isFinal": true,
+    "finality": "Final",
+    "inclusionProofs": [
+      {
+        "page": 1,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x85e9692f7959e40fb92986beec3e4de656b52563522cefa13ad32c43930f3a1f",
+        "onChainVerified": true
+      },
+      {
+        "page": 2,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x599aa65b8637e5763e9358c17d70fe7c424fba2fc53ca422d3b7dc1804cbca0b",
+        "onChainVerified": true
+      },
+      {
+        "page": 3,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0xbe5d5c74dba048a3b575db92a907a98ef9877464bd2c723527c4d8d8fe548db3",
+        "onChainVerified": true
+      },
+      {
+        "page": 4,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x333fcd5ea8f14fa5db3ddd37acdd2b934c68ac9732996ff7acf8735703880d0c",
+        "onChainVerified": true
+      },
+      {
+        "page": 5,
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x9e543c521aa3690c24cecb8ab11c36b5de99388fbf54cc7e884336b76b0346be",
+        "onChainVerified": true
+      }
+    ],
+    "inclusionProofsAllOk": true,
+    "wrongLeafRejected": true
+  },
+  "balanceBeforeC2FLR": "77.9147758",
+  "balanceAfterC2FLR": "77.0328831"
+}

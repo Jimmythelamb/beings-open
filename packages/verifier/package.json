@@ -1,0 +1,38 @@
+{
+  "name": "@beings/verifier",
+  "version": "0.1.0",
+  "private": true,
+  "description": "B.E.I.N.G.S. Verifier node (M6): beings-verify-images (signed bulk download of ballot images, checked against the ledger), beings-blind-reread (masked, independent re-read of every ballot image compared with the on-chain results) and beings-consensus (three-threshold Merkle check of fill scores already computed). The rest of M6 is not yet implemented.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "beings-verify-images": "./dist/cli.js",
+    "beings-blind-reread": "./dist/blindCli.js",
+    "beings-consensus": "./dist/consensusCli.js"
+  },
+  "files": ["dist", "python"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build -w @beings/core",
+    "test": "vitest run",
+    "verify-images": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@beings/core": "*",
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

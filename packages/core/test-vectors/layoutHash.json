@@ -1,0 +1,33 @@
+{
+  "layout": {
+    "schemaVersion": "0.1",
+    "layoutVersion": 2,
+    "electionCode": "BEINGS-2026-K7M4Q2",
+    "units": "mm",
+    "frame": {
+      "widthMm": 187.9,
+      "heightMm": 214
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "ovals": [
+          {
+            "choiceId": "c1",
+            "center": {
+              "x": 18,
+              "y": 25.5
+            },
+            "uv": {
+              "x": 0.096,
+              "y": 0.119
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "canonical": "{\"electionCode\":\"BEINGS-2026-K7M4Q2\",\"frame\":{\"heightMm\":214,\"widthMm\":187.9},\"layoutVersion\":2,\"questions\":[{\"id\":\"q1\",\"ovals\":[{\"center\":{\"x\":18,\"y\":25.5},\"choiceId\":\"c1\",\"uv\":{\"x\":0.096,\"y\":0.119}}]}],\"schemaVersion\":\"0.1\",\"units\":\"mm\"}",
+  "layoutHash": "a3b01e760685221aee7e21c6415d99e92cb76a5c12642c1f9f8d4b66405cd99e",
+  "sha256OfCanonical": "a3b01e760685221aee7e21c6415d99e92cb76a5c12642c1f9f8d4b66405cd99e"
+}

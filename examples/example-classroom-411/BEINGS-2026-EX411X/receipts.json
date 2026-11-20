@@ -1,0 +1,97 @@
+{
+  "status": "posted",
+  "chainId": 114,
+  "electionCode": "BEINGS-2026-EX411X",
+  "from": "0xfB2A3F83F2362566341b8edfB008a0C42A52d73D",
+  "contracts": {
+    "registry": "0x9Ae01EEAf38FB03554970cbDC7F83FFBB8d4Ee8A",
+    "ledger": "0x5d00bE9A32DcF1FcDe9475C8Be874aE8af0fCf0b",
+    "tally": "0xeDaBF1D8597FC4CA0aB71fcF0E91a0be966E7892",
+    "verifiers": "0x360e9d558DEc99a2E2F81Cf925424ba399492bDc",
+    "staff": "0x7e519d972e61929f54d9f316eA79F6BB51dAf635"
+  },
+  "fileSha256": "0xf1eb5000a6d149c2fe5e538181952bd76db5fb7fc4b6254a864eca7795c5cd78",
+  "note": "Posted by post-example.mjs. Commit this file so the site can show the transaction hashes.",
+  "transactions": [
+    {
+      "step": "createPooledElection",
+      "txHash": "0x79a292842505caffced8a848008b366ba20cc0e378e20f1924087370333b8af2",
+      "block": 38029698,
+      "gasUsed": 263686,
+      "status": 1,
+      "feeC2FLR": "0.131843"
+    },
+    {
+      "step": "recordElectionAdmin",
+      "txHash": "0x4ecda937290a6ed5db8bd0d6ddd450648f345ca1756032e9f20d197d9be49b07",
+      "block": 38029699,
+      "gasUsed": 194015,
+      "status": 1,
+      "feeC2FLR": "0.097007"
+    },
+    {
+      "step": "registerDevice",
+      "txHash": "0x00a27c43890458b088f50406b1368bdd248e7480c10699ce21c616d461596109",
+      "block": 38029702,
+      "gasUsed": 72606,
+      "status": 1,
+      "feeC2FLR": "0.036303"
+    },
+    {
+      "step": "lockRoster",
+      "txHash": "0x61e95aced9ba10d05775b9b3897aaf581860ea2893a0cc16894fa23b1bc184c5",
+      "block": 38029703,
+      "gasUsed": 227417,
+      "status": 1,
+      "feeC2FLR": "0.113708"
+    },
+    {
+      "step": "openElection",
+      "txHash": "0xa5edc33d568e2d55adbac01f6d80b0ef9319dd0a536cf3e7e7a30a7073a3d3e9",
+      "block": 38029704,
+      "gasUsed": 34084,
+      "status": 1,
+      "feeC2FLR": "0.017042"
+    },
+    {
+      "step": "submitBatch",
+      "txHash": "0x505c79187aac11391b01d5136fadf7b1183f52d7d31cf9214484122e59828fa8",
+      "block": 38029706,
+      "gasUsed": 778682,
+      "status": 1,
+      "feeC2FLR": "0.389341"
+    },
+    {
+      "step": "closeElection",
+      "txHash": "0x62e3105e27332e14d435df8a0f98281175b9f45e13d0a658190f99f46f26b58b",
+      "block": 38029709,
+      "gasUsed": 29380,
+      "status": 1,
+      "feeC2FLR": "0.014690"
+    },
+    {
+      "step": "postTally",
+      "txHash": "0x53da72f835809555e8afb3b4e463024e82c10af9e61bace319bae07ecf947ba9",
+      "block": 38029715,
+      "gasUsed": 381857,
+      "status": 1,
+      "feeC2FLR": "0.190928"
+    },
+    {
+      "step": "register",
+      "txHash": "0xb6572e275944f103af88cf77dcda8a585b8c81b6e28694a723ff4bb13035efdc",
+      "block": 38029716,
+      "gasUsed": 183777,
+      "status": 1,
+      "feeC2FLR": "0.091888"
+    },
+    {
+      "step": "reportVerification",
+      "txHash": "0x468700d03615765055fd6b1ec33dde8c14fd4ea6f4498f2a4ebc3ab2b8b88d4a",
+      "block": 38029718,
+      "gasUsed": 78140,
+      "status": 1,
+      "feeC2FLR": "0.039070"
+    }
+  ]
+}

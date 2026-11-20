@@ -1,0 +1,685 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "seed": 20261101,
+  "electionCode": "BEINGS-2026-75D8PK",
+  "electionKey": "0xfb3ad79aeb4e3625a9c3893f19585919280eeb34a3375359f1642c617e17d0b1",
+  "contracts": {
+    "ledger": "0xF579913c90b86f102Fff8D07c6c16f465495013C",
+    "registry": "0x651A078e51B69Eff17e22950573EbE0252f43E63",
+    "tally": "0x9844040a1B4BEC18a384d68F29cE2bd5D24cB4f4"
+  },
+  "ballots": {
+    "printed": 210,
+    "cast": 200,
+    "spoiled": 3,
+    "ballotListRoot": "0xa1d0e001af11b6bd38e4c721f5820e28f1b342c30186b13e41c81aef4c819c17"
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Adopt the proposed bylaw change?",
+      "maxMarks": 1,
+      "choices": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Choose one candidate for chair.",
+      "maxMarks": 1,
+      "choices": [
+        "Avery",
+        "Blake",
+        "Casey",
+        "Drew"
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Approve up to two of five projects.",
+      "maxMarks": 2,
+      "choices": [
+        "Park",
+        "Library",
+        "Bridge",
+        "Pool",
+        "Bus"
+      ]
+    }
+  ],
+  "tally": {
+    "q1": {
+      "valid": 177,
+      "blank": 13,
+      "overvote": 6,
+      "unclear": 4,
+      "byChoice": {
+        "c1": 101,
+        "c2": 76
+      }
+    },
+    "q2": {
+      "valid": 163,
+      "blank": 21,
+      "overvote": 10,
+      "unclear": 6,
+      "byChoice": {
+        "c1": 59,
+        "c2": 51,
+        "c3": 28,
+        "c4": 25
+      }
+    },
+    "q3": {
+      "valid": 171,
+      "blank": 19,
+      "overvote": 7,
+      "unclear": 3,
+      "byChoice": {
+        "c1": 83,
+        "c2": 62,
+        "c3": 69,
+        "c4": 52,
+        "c5": 27
+      }
+    }
+  },
+  "reconciliation": {
+    "organizer": {
+      "registered": 200,
+      "issued": 203,
+      "unusedReturned": 0
+    },
+    "failedChecks": 0,
+    "checks": {
+      "R1": true,
+      "R2": true,
+      "R3": true,
+      "R4": true,
+      "R5": true,
+      "R6": true
+    },
+    "counts": {
+      "registered": 200,
+      "printed": 210,
+      "issued": 203,
+      "cast": 200,
+      "spoiled": 3,
+      "unusedReturned": 0,
+      "unissued": 7
+    }
+  },
+  "merkleRoot": "0x11ba02bdeafdb8169760ca4f5d8b9cb5d5179dd0d616ef51763aff16b6cd60af",
+  "estimate": {
+    "gas": 31660000,
+    "gasPriceWei": "650000000000",
+    "costC2FLR": "20.579",
+    "withMarginC2FLR": "26.7527",
+    "budgetC2FLR": "60.0"
+  },
+  "verification": {
+    "recordsOnChain": 200,
+    "spoiledOnChain": 3,
+    "correctionsOnChain": 0,
+    "recordsReadBack": 200,
+    "tallyRecomputedMatchesStored": true,
+    "tallyRecomputedMatchesOrganizer": true,
+    "merkleRootRecomputed": "0x11ba02bdeafdb8169760ca4f5d8b9cb5d5179dd0d616ef51763aff16b6cd60af",
+    "merkleRootStored": "0x11ba02bdeafdb8169760ca4f5d8b9cb5d5179dd0d616ef51763aff16b6cd60af",
+    "merkleRootMatches": true,
+    "reconciliationRecomputedFailedChecks": 0,
+    "reconciliationStoredFailedChecks": 0,
+    "reconciliationMatches": true,
+    "storedRecon": {
+      "registered": 200,
+      "printed": 210,
+      "issued": 203,
+      "cast": 200,
+      "spoiled": 3,
+      "unusedReturned": 0,
+      "unissued": 7
+    },
+    "isFinal": true,
+    "finality": "Final",
+    "inclusionProofs": [
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x5cb6a9a8b04295ebc176167c243612535c9d8c9f41d97c5b37ca4070538929d6",
+        "onChainVerified": true
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x7fe5523ecd67861dfdeb337d04c429b6295f8d38c4278c18ede0cd1c00a2a426",
+        "onChainVerified": true
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x8298aae090f178b450ec25da6f117aed1d933bb9f7e6693f2d238eb781872925",
+        "onChainVerified": true
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0xe7bfcbc614331093314deb4b7183ca651c9ffccd2e268486c02779430db105aa",
+        "onChainVerified": true
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x3c5238df89d2a27f97ba613b1b53f51b62d39e47ee6c8865f40d86cad8ddcfbf",
+        "onChainVerified": true
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x6b16ad74fbc194acb78b308990361d7aaf1ed65766459c6e51c37d80f2bcf6c8",
+        "onChainVerified": true
+      },
+      {
+        "ballotCode": "REDACTED-BALLOT-CODE",
+        "leaf": "0x692fbf323d5da9f91d4ccb15bddbc2459977feaff62a3b44aac2eef24ce678f5",
+        "onChainVerified": true
+      }
+    ],
+    "inclusionProofsAllOk": true,
+    "wrongLeafRejected": true
+  },
+  "perBallotCost": {
+    "single": {
+      "ballots": 20,
+      "avgGas": 151025,
+      "avgFeeC2FLR": "0.09816612"
+    },
+    "batch": {
+      "5": {
+        "batches": 4,
+        "ballots": 20,
+        "avgGasPerBallot": 121075,
+        "avgFeePerBallotC2FLR": "0.07869862"
+      },
+      "10": {
+        "batches": 4,
+        "ballots": 40,
+        "avgGasPerBallot": 117371,
+        "avgFeePerBallotC2FLR": "0.07629128"
+      },
+      "20": {
+        "batches": 3,
+        "ballots": 60,
+        "avgGasPerBallot": 115514,
+        "avgFeePerBallotC2FLR": "0.07508423"
+      },
+      "30": {
+        "batches": 2,
+        "ballots": 60,
+        "avgGasPerBallot": 114917,
+        "avgFeePerBallotC2FLR": "0.074696136666666666"
+      }
+    },
+    "allBatched": {
+      "ballots": 180,
+      "avgGasPerBallot": 116346,
+      "avgFeePerBallotC2FLR": "0.075624697777777777"
+    }
+  },
+  "phasesSeconds": {
+    "setup (create, register device, open)": 7.2,
+    "submit 20 single records": 44.4,
+    "submit 180 records in batches": 30.4,
+    "mark 3 spoiled, close": 7.2,
+    "post tally": 1.9,
+    "independent verification (reads only)": 10.1
+  },
+  "totals": {
+    "transactions": 41,
+    "gas": 24819479,
+    "feeC2FLR": "16.13266135",
+    "elapsedSeconds": 104.7
+  },
+  "balanceBeforeC2FLR": "94.6329786",
+  "balanceAfterC2FLR": "78.50031725",
+  "steps": [
+    {
+      "step": "ElectionRegistry.createElection",
+      "txHash": "0x963be3e41e7e04e9511d72d335a04b0b9c1dd51f3cb44b4e71253ff73617e748",
+      "block": 37317412,
+      "gasUsed": 195354,
+      "gasPriceWei": "650000000000",
+      "feeWei": "126980100000000000",
+      "fee": "0.1269801",
+      "seconds": 3.5
+    },
+    {
+      "step": "ElectionRegistry.registerDevice",
+      "txHash": "0xd5cad100dc781b171660b6ad0355feac766f7d97248411b78d574419b2d3cc3e",
+      "block": 37317413,
+      "gasUsed": 72518,
+      "gasPriceWei": "650000000000",
+      "feeWei": "47136700000000000",
+      "fee": "0.0471367",
+      "seconds": 1.9
+    },
+    {
+      "step": "ElectionRegistry.openElection",
+      "txHash": "0x74bfdb28a2d38825c65b3614ab2a9727c3a0ca7059f5d3422014ba8ad5776eba",
+      "block": 37317415,
+      "gasUsed": 34106,
+      "gasPriceWei": "650000000000",
+      "feeWei": "22168900000000000",
+      "fee": "0.0221689",
+      "seconds": 1.9
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x60004f68aad46a6254581b05d78e42f338a1f40d358907856cdd33fbe13031e0",
+      "block": 37317416,
+      "gasUsed": 167235,
+      "gasPriceWei": "650000000000",
+      "feeWei": "108702750000000000",
+      "fee": "0.10870275",
+      "seconds": 1.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x30a90146b5de87651d95a516b689143b2ff916d18e774ce993d332badb4de723",
+      "block": 37317419,
+      "gasUsed": 150171,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97611150000000000",
+      "fee": "0.09761115",
+      "seconds": 3.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0xd3d5cffdf06daed5289709746c8e17238cd1583bf9a30b7e97aceb729cb81f97",
+      "block": 37317421,
+      "gasUsed": 150207,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97634550000000000",
+      "fee": "0.09763455",
+      "seconds": 1.8,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x18667eff2b719b10ca68ee7f6ef882aa47c08c703f7592dfd68079c5b5ff105b",
+      "block": 37317422,
+      "gasUsed": 150099,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97564350000000000",
+      "fee": "0.09756435",
+      "seconds": 1.6,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x36680fdc93d36f4d0d13642c1500c00c4586a1792dd29e0a8f7161c52e0d4ab8",
+      "block": 37317424,
+      "gasUsed": 150195,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97626750000000000",
+      "fee": "0.09762675",
+      "seconds": 2.3,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0xd772978b9914fd57cbe7d17a5fabb08645e2b19cfd78f82d5aedfea56ef81e75",
+      "block": 37317426,
+      "gasUsed": 150195,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97626750000000000",
+      "fee": "0.09762675",
+      "seconds": 1.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x0b515015bc19f7557c003cd07bd87bd89797292dfab606f4e0c9d33db6c919e3",
+      "block": 37317427,
+      "gasUsed": 150087,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97556550000000000",
+      "fee": "0.09755655",
+      "seconds": 1.5,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x355df886b04980d30fc2a8c1389772e2175685e38a06dd4e9e29be897ea44910",
+      "block": 37317430,
+      "gasUsed": 150195,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97626750000000000",
+      "fee": "0.09762675",
+      "seconds": 3.5,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x29e884286de0495822b643f0033e0c9830307abbc450fbcbc093fe3e065183ce",
+      "block": 37317433,
+      "gasUsed": 150135,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97587750000000000",
+      "fee": "0.09758775",
+      "seconds": 3.3,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x650394ef446dd87c33a6928de5c8cfc467364ebea60fe09c55f0dc6da42d28d4",
+      "block": 37317436,
+      "gasUsed": 150195,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97626750000000000",
+      "fee": "0.09762675",
+      "seconds": 2.3,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x1fbb191a0ef2720a27180bc12bd8e8f66f92629a3e56f2ca4408f95cbbf7b8b6",
+      "block": 37317438,
+      "gasUsed": 150123,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97579950000000000",
+      "fee": "0.09757995",
+      "seconds": 1.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x156a0286c00a31d3ab3d45e38adeda7a165ecafe76c79ac4b6e330b425584923",
+      "block": 37317439,
+      "gasUsed": 150207,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97634550000000000",
+      "fee": "0.09763455",
+      "seconds": 1.5,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x1f9dd0ba5513330b845d695e16736be7252d995f5f03508158a023a3af6a561d",
+      "block": 37317441,
+      "gasUsed": 150207,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97634550000000000",
+      "fee": "0.09763455",
+      "seconds": 3.2,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0xad92926c1ea1a60c2017a8830d3628b8c007028ea930a899e6f5d86af3eef892",
+      "block": 37317444,
+      "gasUsed": 150135,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97587750000000000",
+      "fee": "0.09758775",
+      "seconds": 1.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x7f372998d1a98833642a8250aea23c707672c2b9675879ac1b07659299b48462",
+      "block": 37317445,
+      "gasUsed": 150195,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97626750000000000",
+      "fee": "0.09762675",
+      "seconds": 1.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x1683d49fa07f7a4c281e60d4032965355b8ac2a20c8146a4c224c9c88ef3b15f",
+      "block": 37317447,
+      "gasUsed": 150207,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97634550000000000",
+      "fee": "0.09763455",
+      "seconds": 2,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x404cb02e4941a97043214a1455df80b683e8ae6642d9b59718c86e03b3cd1571",
+      "block": 37317448,
+      "gasUsed": 150135,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97587750000000000",
+      "fee": "0.09758775",
+      "seconds": 1.6,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x315f02510c923637b77346d9ff1eb3dd815e38d435db3bd52003b2e5a586e35a",
+      "block": 37317449,
+      "gasUsed": 150183,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97618950000000000",
+      "fee": "0.09761895",
+      "seconds": 1.6,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0x88903d6c0c16f4c1a0604c1d61ac2f5872bee19f1a62e442204363e2e71101ae",
+      "block": 37317451,
+      "gasUsed": 150183,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97618950000000000",
+      "fee": "0.09761895",
+      "seconds": 3.1,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitRecord",
+      "txHash": "0xf7ec66399170839ffbd3fb6ac1cbf35d4c84668fb721bd872bc985d076176649",
+      "block": 37317454,
+      "gasUsed": 150207,
+      "gasPriceWei": "650000000000",
+      "feeWei": "97634550000000000",
+      "fee": "0.09763455",
+      "seconds": 1.9,
+      "records": 1
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xa2bf0837ba12dc41f34de84355a7789556ab671ec0391c0a36b717365fffbaab",
+      "block": 37317455,
+      "gasUsed": 605407,
+      "gasPriceWei": "650000000000",
+      "feeWei": "393514550000000000",
+      "fee": "0.39351455",
+      "seconds": 1.9,
+      "records": 5
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0x4aa8b3c4d2204e876d96c74e2c0f83694065053964a39af9cd16f1cce8eca7f9",
+      "block": 37317457,
+      "gasUsed": 605383,
+      "gasPriceWei": "650000000000",
+      "feeWei": "393498950000000000",
+      "fee": "0.39349895",
+      "seconds": 1.9,
+      "records": 5
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xc4a541019193555461107baeb00b6b46e3b89f75ad0da97b4dd2d7510e49a17a",
+      "block": 37317458,
+      "gasUsed": 605395,
+      "gasPriceWei": "650000000000",
+      "feeWei": "393506750000000000",
+      "fee": "0.39350675",
+      "seconds": 1.5,
+      "records": 5
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0x48deb02aa637270b2b8ffb2d61d6a0a889f8b8a834b9bff7246462a6993dfd7d",
+      "block": 37317460,
+      "gasUsed": 605311,
+      "gasPriceWei": "650000000000",
+      "feeWei": "393452150000000000",
+      "fee": "0.39345215",
+      "seconds": 3.2,
+      "records": 5
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0x8f303bb70bf7a9e9265bf2d9d9737f5338a7c2e711f375fc1ac120a9765c4076",
+      "block": 37317463,
+      "gasUsed": 1173619,
+      "gasPriceWei": "650000000000",
+      "feeWei": "762852350000000000",
+      "fee": "0.76285235",
+      "seconds": 1.9,
+      "records": 10
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xa226167ec275743501316f0318cdd8634e3dfc70538483b333ebc0e26254b962",
+      "block": 37317465,
+      "gasUsed": 1173763,
+      "gasPriceWei": "650000000000",
+      "feeWei": "762945950000000000",
+      "fee": "0.76294595",
+      "seconds": 3.1,
+      "records": 10
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0x8438eb41951fb052600529ad8665587aee962c85d457abb45e96d5afc065f733",
+      "block": 37317466,
+      "gasUsed": 1173787,
+      "gasPriceWei": "650000000000",
+      "feeWei": "762961550000000000",
+      "fee": "0.76296155",
+      "seconds": 2,
+      "records": 10
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xdd1c4080158598c7aa45c68851561db9073af847e6b79414d9d0deb78cf09203",
+      "block": 37317468,
+      "gasUsed": 1173679,
+      "gasPriceWei": "650000000000",
+      "feeWei": "762891350000000000",
+      "fee": "0.76289135",
+      "seconds": 2,
+      "records": 10
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xba11297d27be0738f9fdafba0087fc53327f8f219a9f53387bd63205cbb5ebef",
+      "block": 37317470,
+      "gasUsed": 2310224,
+      "gasPriceWei": "650000000000",
+      "feeWei": "1501645600000000000",
+      "fee": "1.5016456",
+      "seconds": 2,
+      "records": 20
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xb3cefcf81f5e51241c43f9ddcb387a7925cd97bc0de19eb5b2f6085f90c63b6b",
+      "block": 37317471,
+      "gasUsed": 2310296,
+      "gasPriceWei": "650000000000",
+      "feeWei": "1501692400000000000",
+      "fee": "1.5016924",
+      "seconds": 1.7,
+      "records": 20
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0x09751a9339309aeb1b526bcfe15c0b381c72fbe60bc5935c608c1c1019f3b1f7",
+      "block": 37317473,
+      "gasUsed": 2310332,
+      "gasPriceWei": "650000000000",
+      "feeWei": "1501715800000000000",
+      "fee": "1.5017158",
+      "seconds": 3.2,
+      "records": 20
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0xb337c9747886c4d82804c04ae403d0f8e1cce0eb6dde6306d1d7bc0f4ae1b60a",
+      "block": 37317477,
+      "gasUsed": 3447544,
+      "gasPriceWei": "650000000000",
+      "feeWei": "2240903600000000000",
+      "fee": "2.2409036",
+      "seconds": 3.3,
+      "records": 30
+    },
+    {
+      "step": "BallotLedger.submitBatch",
+      "txHash": "0x872d7bcf164f00eb69bb146176bcf3a749b2d1b444a5260fac525d5c11a863c5",
+      "block": 37317480,
+      "gasUsed": 3447484,
+      "gasPriceWei": "650000000000",
+      "feeWei": "2240864600000000000",
+      "fee": "2.2408646",
+      "seconds": 2.6,
+      "records": 30
+    },
+    {
+      "step": "BallotLedger.markSpoiled",
+      "txHash": "0x7c0de5994d9e26b2f3f38a94f1eaa75d5ad76bc12f20976ae7b203f78f9c5b0c",
+      "block": 37317481,
+      "gasUsed": 82509,
+      "gasPriceWei": "650000000000",
+      "feeWei": "53630850000000000",
+      "fee": "0.05363085",
+      "seconds": 1.5
+    },
+    {
+      "step": "BallotLedger.markSpoiled",
+      "txHash": "0x4c8b4e647d9c02cbffddfee69274df2aa46a8c34ec906c0636cde009e6a2d58e",
+      "block": 37317482,
+      "gasUsed": 65409,
+      "gasPriceWei": "650000000000",
+      "feeWei": "42515850000000000",
+      "fee": "0.04251585",
+      "seconds": 1.5
+    },
+    {
+      "step": "BallotLedger.markSpoiled",
+      "txHash": "0x7f449b051e16db96c2cc772d29422f84df9b387a72f736402d726588efe829bc",
+      "block": 37317484,
+      "gasUsed": 65397,
+      "gasPriceWei": "650000000000",
+      "feeWei": "42508050000000000",
+      "fee": "0.04250805",
+      "seconds": 1.8
+    },
+    {
+      "step": "ElectionRegistry.closeElection",
+      "txHash": "0xa3287ee3a948cd680d381d01e1f7940435b4b08a34982b5d3863db74afeafd22",
+      "block": 37317486,
+      "gasUsed": 29402,
+      "gasPriceWei": "650000000000",
+      "feeWei": "19111300000000000",
+      "fee": "0.0191113",
+      "seconds": 2.3
+    },
+    {
+      "step": "Tally.postTally (3 questions)",
+      "txHash": "0x4e5cacb7c40a900189657edd641536fd7f124664b225bba30179f915f10a5080",
+      "block": 37317487,
+      "gasUsed": 312064,
+      "gasPriceWei": "650000000000",
+      "feeWei": "202841600000000000",
+      "fee": "0.2028416",
+      "seconds": 1.9
+    }
+  ]
+}

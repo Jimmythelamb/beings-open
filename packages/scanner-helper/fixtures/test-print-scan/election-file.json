@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "0.1",
+  "version": 1,
+  "name": "SYNTHETIC TEST PAGE — NOT A REAL BALLOT",
+  "organizerPublicKey": "0x0000000000000000000000000000000000000001",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Is this a test print and scan? (not a real vote)",
+      "maxMarks": 1,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Yes"
+        },
+        {
+          "id": "c2",
+          "text": "No"
+        }
+      ]
+    }
+  ],
+  "resultRules": {
+    "emptyBelow": 15,
+    "markedAbove": 50,
+    "results": [
+      "V",
+      "B",
+      "O",
+      "U"
+    ],
+    "abstainButton": false
+  },
+  "privacy": {
+    "redactImages": true,
+    "publishOrder": "sorted",
+    "timeGranularity": "event",
+    "minBreakdownSize": 10
+  },
+  "registeredVoters": 1,
+  "approvedAppHashes": [
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  "quorum": 1,
+  "opensAt": "2026-11-11T16:00:00Z",
+  "closesAt": "2026-11-11T22:00:00Z",
+  "electionCode": "BEINGS-2026-TEST00",
+  "ballotCodes": [
+    "TESTPRNTSC01"
+  ],
+  "layoutHash": "c2beac63ef418f67a1e860cae0326133fedfd1edf5e4049921c5a80c103cb1eb"
+}

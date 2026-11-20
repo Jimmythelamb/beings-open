@@ -1,0 +1,13 @@
+{
+  "name": "beings-walletconnect-vendor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Builds public/vendor/walletconnect.js for beingsvote-site. Not run by Netlify.",
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "dependencies": {
+    "@walletconnect/ethereum-provider": "2.26.0",
+    "qrcode-generator": "2.0.4"
+  },
+  "devDependencies": { "esbuild": "0.28.2" }
+}

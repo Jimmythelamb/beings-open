@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "0.1",
+  "version": 1,
+  "name": "Room 12 Class Election",
+  "organizerPublicKey": "0x1111111111111111111111111111111111111111",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Should we have a class pizza party on Friday?",
+      "maxMarks": 1,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Yes"
+        },
+        {
+          "id": "c2",
+          "text": "No"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Who should be class president?",
+      "maxMarks": 1,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Amara Okafor"
+        },
+        {
+          "id": "c2",
+          "text": "Ben Tremblay"
+        },
+        {
+          "id": "c3",
+          "text": "Chloe Nguyen"
+        },
+        {
+          "id": "c4",
+          "text": "Dmitri Ivanov"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Which two field trips should we take? (choose up to two)",
+      "maxMarks": 2,
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Science museum"
+        },
+        {
+          "id": "c2",
+          "text": "Aquarium"
+        },
+        {
+          "id": "c3",
+          "text": "Zoo"
+        },
+        {
+          "id": "c4",
+          "text": "Fire station"
+        },
+        {
+          "id": "c5",
+          "text": "Botanical garden"
+        }
+      ]
+    }
+  ],
+  "resultRules": {
+    "emptyBelow": 15,
+    "markedAbove": 50,
+    "results": [
+      "V",
+      "B",
+      "O",
+      "U"
+    ],
+    "abstainButton": false
+  },
+  "privacy": {
+    "redactImages": true,
+    "publishOrder": "sorted",
+    "timeGranularity": "event",
+    "minBreakdownSize": 10
+  },
+  "registeredVoters": 30,
+  "approvedAppHashes": [
+    "9f2c1a7b4d8e3f605a1b2c3d4e5f60718293a4b5c6d7e8f9012345678901abcd"
+  ],
+  "quorum": 1,
+  "opensAt": "2026-11-09T16:00:00Z",
+  "closesAt": "2026-11-09T22:00:00Z"
+}
